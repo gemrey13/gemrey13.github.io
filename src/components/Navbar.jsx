@@ -11,8 +11,12 @@ const Navbar = () => {
         <img className="mx-2 w-48" src={logo} alt="logo" />
       </div>
       <div className="flex items-center justify-center gap-4 m-8 text-xl">
-        <FaFacebook />
-        <FaGithub />
+        <a href="https://www.facebook.com/Gem.Rey13" target="_blank">
+          <FaFacebook />
+        </a>
+        <a href="https://github.com/gemrey13" target="_blank">
+          <FaGithub />
+        </a>
         <FaLinkedin />
         <FaTiktok />
       </div>
