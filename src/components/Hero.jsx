@@ -1,4 +1,4 @@
-import { HERO_CONTENT } from "../constants/index.js";
+import { HERO_CONTENT, HERO_CONTENT2 } from "../constants/index.js";
 import gemPic from "../assets/gemPic.jpg";
 const Hero = () => {
   return (
@@ -12,8 +12,12 @@ const Hero = () => {
             <span className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-4xl tracking-tight text-transparent">
               Freelance Software Developer
             </span>
-            <p className="my-2 max-w-xl py-6 font-light tracking-tighter">
+            <p className="mt-2 max-w-xl pt-6 font-light tracking-tighter">
               {HERO_CONTENT}
+            </p>
+            <br />
+            <p className="mb-2 max-w-xl pb-6 font-light tracking-tighter">
+              {HERO_CONTENT2}
             </p>
           </div>
         </div>
