@@ -1,7 +1,7 @@
 {
-  "homepage": "http://gemrey13.github.io/gemrey13.github.io",
+  "homepage": "https://gemrey13.github.io/gemrey13.github.io",
   "name": "gemrey13.github.io",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -10,7 +10,7 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "react": "^18.3.1",
