@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "homepage": "https://gemrey13.github.io/",
+    "homepage": "https://gemrey13.github.io/gemrey13.github.io",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
