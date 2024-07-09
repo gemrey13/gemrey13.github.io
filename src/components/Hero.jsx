@@ -9,7 +9,7 @@ const Hero = () => {
             <h1 className="pb-16 text-6xl font-thin tracking-tight lg:mt-16 lg:text-6xl">
               Gem Rey Rañola
             </h1>
-            <span className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-4xl tracking-tight text-transparent">
+            <span className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-2xl lg:text-3xl tracking-tight text-transparent">
               Freelance Software Developer
             </span>
             <p className="mt-2 max-w-xl pt-6 font-light tracking-tighter">
