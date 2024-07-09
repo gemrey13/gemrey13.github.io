@@ -20,8 +20,15 @@ const Navbar = () => {
         <a href="https://github.com/gemrey13" target="_blank">
           <FaGithub />
         </a>
-        <FaLinkedin />
-        <FaTiktok />
+        <a
+          href="https://www.linkedin.com/in/gem-rey-ra%C3%B1ola-99a61b2a9/"
+          target="_blank"
+        >
+          <FaLinkedin />
+        </a>
+        <a href="https://www.tiktok.com/@codewgem" target="_blank">
+          <FaTiktok />
+        </a>
       </div>
     </nav>
   );
