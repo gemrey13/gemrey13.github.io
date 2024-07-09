@@ -7,8 +7,11 @@ import { FaFacebook } from "react-icons/fa";
 const Navbar = () => {
   return (
     <nav className="mb-20 flex items-center justify-between py-6">
-      <div className="flex flex-shrink-0 items-center">
+      <div className="hidden lg:flex flex-shrink-0 items-center">
         <img className="mx-2 w-48" src={logo} alt="logo" />
+      </div>
+      <div className="sm:hidden flex flex-shrink-0 items-center">
+        <h2 className="text-2xl font-semibold">GG</h2>
       </div>
       <div className="flex items-center justify-center gap-4 m-8 text-xl">
         <a href="https://www.facebook.com/Gem.Rey13" target="_blank">
