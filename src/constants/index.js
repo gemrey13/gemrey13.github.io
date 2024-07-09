@@ -1,7 +1,6 @@
-import project1 from "../assets/projects/project-1.jpg";
-import project2 from "../assets/projects/project-2.jpg";
-import project3 from "../assets/projects/project-3.jpg";
-import project4 from "../assets/projects/project-4.jpg";
+import capstone from "../assets/projects/capstone-project.png";
+import voting from "../assets/projects/voting.png";
+import inventory from "../assets/projects/inventory.jpg";
 
 export const HERO_CONTENT = `As a freelance software developer, my passion lies in creating reliable and scalable web applications. With junior-level skills in Python, Django, React, Node.js, MySQL, and PHP, I aim to deliver high-quality solutions that meet client needs and enhance user experiences. My goal is to contribute to the success of freelance projects by providing robust, efficient, and innovative software solutions.`;
 export const HERO_CONTENT2 = `I am enthusiastic about expanding my skill set to include new technologies such as React Native for mobile development and C# .NET for desktop applications. Embracing continuous learning and growth, I am eager to leverage these technologies to deliver versatile and innovative solutions that cater to the evolving needs of my clients in both mobile and desktop environments.`;
@@ -27,32 +26,25 @@ export const EXPERIENCES = [
 
 export const PROJECTS = [
     {
-        title: "E-Commerce Website",
-        image: project1,
+        title: "DLL Alumni Portal Web App",
+        image: capstone,
         description:
-            "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
-        technologies: ["HTML", "CSS", "React", "Node.js", "MongoDB"],
+            "An online portal for alumni in DLL featuring tracer study and curriculum analysis.",
+        technologies: ["React", "Tailwind", "REST API", "Django", "MySQL"],
     },
     {
-        title: "Task Management App",
-        image: project2,
+        title: "CBQP Voting System",
+        image: voting,
         description:
-            "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
-        technologies: ["HTML", "CSS", "Angular", "Firebase"],
+            "A voting application designed for Cooperative Bank of Quezon Province to facilitate cooperative decision-making processes.",
+        technologies: ["HTML", "Tailwind", "Django", "MySQL"],
     },
     {
-        title: "Portfolio Website",
-        image: project3,
+        title: "CBQP FFE Invetory System",
+        image: inventory,
         description:
-            "A personal portfolio website showcasing projects, skills, and contact information.",
-        technologies: ["HTML", "CSS", "React", "Bootstrap"],
-    },
-    {
-        title: "Blogging Platform",
-        image: project4,
-        description:
-            "A platform for creating and publishing blog posts, with features like rich text editing, commenting, and user profiles.",
-        technologies: ["HTML", "CSS", "Vue.js", "Express", "mySQL"],
+            "An inventory management system developed for Cooperative Bank of Quezon Province to track Fixed Furniture and Equipment (FFE) within the organization.",
+        technologies: ["HTML", "Tailwind", "Django", "Postgresql"],
     },
 ];
 
