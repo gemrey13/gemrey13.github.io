@@ -2,7 +2,7 @@ import { RiReactjsLine } from "react-icons/ri";
 import { FaPython, FaNodeJs } from "react-icons/fa";
 import { BiLogoPostgresql, BiLogoDjango } from "react-icons/bi";
 import { SiPhp, SiMysql } from "react-icons/si";
-import { animate, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const iconVariants = (duration) => ({
   initial: { y: -10 },
