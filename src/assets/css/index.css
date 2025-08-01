@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Droid Sans');
+@import "tailwindcss";
+
+@theme {
+  --color-secondary: #616161;
+  --color-link: #4D00DB;
+  --color-quotebox: #FBB052;
+  --color-quotebox: #FBB052;
+
+
+  --font-ubuntu: "Ubuntu", sans-serif; 
+  --font-droid: "Droid Sans", serif; 
+}
