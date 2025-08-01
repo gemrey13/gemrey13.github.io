@@ -2,9 +2,13 @@ import HeroSection from "../components/Home/HeroSection"
 
 const Home = () => {
   return (
-    <div>
-      <HeroSection/>
+    <>
+      <HeroSection />
+      <HeroSection />
+
+    <div className="mx-11">
     </div>
+    </>
   )
 }
 

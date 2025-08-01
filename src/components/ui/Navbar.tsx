@@ -3,7 +3,7 @@ import FigmaIcon from "../../assets/icon/Figma Icon.png"
 
 const Navbar = () => {
   return (
-    <nav className="sticky top-0 mt-5 z-50 w-[30%] mx-auto rounded-full border-secondary border font-semibold">
+    <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-[30%] rounded-full border border-secondary bg-white font-semibold">
       <div className="flex justify-between mx-5 items-center h-11 my-1">
         <Link to="/" className="rounded-full bg-[#572F2F] h-9 w-9 text-white  flex items-center justify-center">
           GR.
