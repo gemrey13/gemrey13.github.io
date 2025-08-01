@@ -4,8 +4,8 @@ import FigmaIcon from "../../assets/icon/Figma Icon.png"
 const Navbar = () => {
   return (
     <nav className="sticky top-0 mt-5 z-50 w-[30%] mx-auto rounded-full border-secondary border font-semibold">
-      <div className="flex justify-between mx-3 items-center h-12 my-1">
-        <Link to="/" className="rounded-full bg-[#572F2F] h-10 w-10 text-white  flex items-center justify-center">
+      <div className="flex justify-between mx-5 items-center h-11 my-1">
+        <Link to="/" className="rounded-full bg-[#572F2F] h-9 w-9 text-white  flex items-center justify-center">
           GR.
         </Link>
         <ul className="flex space-x-10 text-gray-700">
