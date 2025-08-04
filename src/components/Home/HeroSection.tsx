@@ -26,7 +26,7 @@ const HeroSection = () => {
           to="/Gem Rey Rañola.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-link text-lg font-semibold underline md:text-2xl"
+          className="text-link text-lg font-semibold underline md:text-2xl w-fit"
         >
           Download My Résumé
         </Link>
