@@ -24,7 +24,12 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link to="#" className="hover:text-blue-600">
+            <Link
+              to="/Gem Rey Rañola.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-600"
+            >
               Résumé
             </Link>
           </li>
