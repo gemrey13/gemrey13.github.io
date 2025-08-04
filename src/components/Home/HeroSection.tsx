@@ -8,14 +8,78 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 import SocialIconLink from "../SEO/SocialIconLink";
+import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useState } from "react";
+
+type Direction = number;
+
+const texts = [
+  "Nice to meet you!",
+  "Powered by Coffee ☕.",
+  "Hire me, please 🙏!",
+  "Full-Stack Developer 🧑‍💻.",
+  "Code. Sleep. Repeat.",
+  "I Break, Then Fix.",
+  "Code > Sleep!",
+];
+
+const variants = {
+  enter: (direction: Direction) => {
+    direction;
+    return {
+      y: -20,
+      opacity: 0,
+    };
+  },
+  center: {
+    zIndex: 1,
+    y: 0,
+    opacity: 1,
+  },
+  exit: (direction: Direction) => {
+    direction;
+    return {
+      zIndex: 0,
+      opacity: 0,
+    };
+  },
+};
 
 const HeroSection = () => {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    setTimeout(() => {
+      let next = index + 1;
+      if (next === texts.length) {
+        next = 0;
+      }
+      setIndex(next);
+    }, 3 * 1000);
+  }, [index, setIndex]);
+
   return (
     <section className="grid h-screen md:mt-0 md:grid-cols-2">
       {/* Text Section */}
       <div className="mx-5 flex flex-col justify-center space-y-6 md:mx-14">
-        <h1 className="text-2xl font-semibold md:text-5xl">
-          Hello, I'm Gem. <br /> Hire Me!
+        <h1 className="relative pb-8 text-2xl font-semibold md:pb-12 md:text-5xl">
+          Hello, I'm Gem. <br />
+          <AnimatePresence>
+            <motion.span
+              className="absolute"
+              variants={variants}
+              key={index}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={{
+                y: { type: "keyframes", stiffness: 300, damping: 200 },
+                opacity: { duration: 0.1 },
+              }}
+            >
+              {texts[index]}
+            </motion.span>
+          </AnimatePresence>
         </h1>
 
         <p className="text-secondary text-sm md:text-lg">
@@ -26,7 +90,7 @@ const HeroSection = () => {
           to="/Gem Rey Rañola.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-link text-lg font-semibold underline md:text-2xl w-fit"
+          className="text-link w-fit text-lg font-semibold underline md:text-2xl"
         >
           Download My Résumé
         </Link>
