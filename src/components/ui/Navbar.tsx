@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import FigmaIcon from "../../assets/icon/Figma Icon.png";
+import NavItemLink from "./NavItemLink";
 
 const Navbar = () => {
   return (
@@ -14,24 +15,17 @@ const Navbar = () => {
 
         <ul className="flex space-x-5 text-gray-700 md:space-x-10">
           <li>
-            <Link to="#" className="hover:text-blue-600">
-              Projects
-            </Link>
+            <NavItemLink to="#" label="Projects" />
           </li>
           <li>
-            <Link to="#" className="hover:text-blue-600">
-              About
-            </Link>
+            <NavItemLink to="#" label="About" />
           </li>
           <li>
-            <Link
+            <NavItemLink
               to="/Gem Rey Rañola.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-blue-600"
-            >
-              Résumé
-            </Link>
+              label="Résumé"
+              isExternal={true}
+            />
           </li>
         </ul>
 

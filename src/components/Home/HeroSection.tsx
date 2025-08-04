@@ -7,25 +7,26 @@ import {
   FaTiktok,
   FaWhatsapp,
 } from "react-icons/fa";
+import SocialIconLink from "../SEO/SocialIconLink";
 
 const HeroSection = () => {
   return (
-    <section className="grid md:mt-0 md:grid-cols-2 h-screen">
+    <section className="grid h-screen md:mt-0 md:grid-cols-2">
       {/* Text Section */}
-      <div className="flex flex-col justify-center space-y-6 mx-5 md:mx-14">
-        <h1 className="text-3xl font-bold md:text-5xl">
+      <div className="mx-5 flex flex-col justify-center space-y-6 md:mx-14">
+        <h1 className="text-2xl font-semibold md:text-5xl">
           Hello, I'm Gem. <br /> Hire Me!
         </h1>
 
-        <p className="text-secondary">
-          I'm a recent Bachelor in Information Technology graduate with a
-          specialization in web development.
+        <p className="text-secondary text-sm md:text-lg">
+          I'm a recent Bachelor in Information Technology <br />
+          graduate with a specialization in web development.
         </p>
         <Link
           to="/Gem Rey Rañola.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-link text-xl font-bold underline md:text-2xl"
+          className="text-link text-lg font-semibold underline md:text-2xl"
         >
           Download My Résumé
         </Link>
@@ -41,11 +42,45 @@ const HeroSection = () => {
 
         {/* Social Icons */}
         <div className="absolute right-5 bottom-5 flex space-x-6 text-2xl text-white md:text-3xl">
-          <FaFacebook />
-          <FaInstagram />
-          <FaLinkedin />
-          <FaTiktok />
-          <FaWhatsapp />
+          <SocialIconLink
+            href="https://facebook.com/codewgem"
+            label="Visit my Facebook profile"
+            title="Facebook"
+          >
+            <FaFacebook />
+          </SocialIconLink>
+
+          <SocialIconLink
+            href="https://instagram.com/codewgem"
+            label="Visit my Instagram profile"
+            title="Instagram"
+          >
+            <FaInstagram />
+          </SocialIconLink>
+
+          <SocialIconLink
+            href="https://linkedin.com/in/codewgem"
+            label="Visit my LinkedIn profile"
+            title="LinkedIn"
+          >
+            <FaLinkedin />
+          </SocialIconLink>
+
+          <SocialIconLink
+            href="https://tiktok.com/@codewgem"
+            label="Visit my TikTok profile"
+            title="TikTok"
+          >
+            <FaTiktok />
+          </SocialIconLink>
+
+          <SocialIconLink
+            href="/"
+            label="Chat with me on WhatsApp"
+            title="WhatsApp"
+          >
+            <FaWhatsapp />
+          </SocialIconLink>
         </div>
       </div>
     </section>
