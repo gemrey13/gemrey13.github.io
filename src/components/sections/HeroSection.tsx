@@ -59,9 +59,9 @@ const HeroSection = () => {
   }, [index, setIndex]);
 
   return (
-    <section className="grid h-screen md:mt-0 md:grid-cols-2">
+    <section className="grid mt-4 h-[80%] md:mt-0 md:grid-cols-2">
       {/* Text Section */}
-      <div className="mx-5 flex flex-col justify-center space-y-6 md:mx-14">
+      <div className="mx-5 my-8 flex flex-col justify-center space-y-6 md:mx-16">
         <h1 className="relative pb-8 text-2xl font-semibold md:pb-12 md:text-5xl">
           Hello, I'm Gem. <br />
           <AnimatePresence>

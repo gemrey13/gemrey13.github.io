@@ -8,10 +8,10 @@ interface TitleProps {
 
 const Title = ({ header, linkTitle, internalLink }: TitleProps) => {
   return (
-    <div>
-      <h2 className="text-lg md:text-3xl font-semibold">{header}</h2>
+    <div className={internalLink && linkTitle ? "flex items-baseline justify-between" : ""}>
+      <h2 className="text-xl md:text-3xl font-semibold">{header}</h2>
       {linkTitle && internalLink ? (
-        <Link to={internalLink}>{linkTitle}</Link>
+        <Link to={internalLink} className="underline text-sm md:text-base">{linkTitle}</Link>
       ) : null}
     </div>
   );

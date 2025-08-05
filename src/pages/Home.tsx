@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <>
       <HeroSection />
-      <div className="mx-5 md:mx-14">
+      <div className="mx-5 md:mx-16">
         <AboutMeSection />
       </div>
     </>
