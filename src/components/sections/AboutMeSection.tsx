@@ -3,7 +3,7 @@ import CodingPic from "../../assets/photos/Gem Coding.png";
 
 const AboutMeSection = () => {
   return (
-    <section className="mt-14 h-screen">
+    <section className="mt-14 h-auto">
       <Title
         header="About Me"
         linkTitle="Get to know me more"
@@ -45,7 +45,6 @@ const AboutMeSection = () => {
           </p>
         </article>
       </div>
-      asdsa
     </section>
   );
 };

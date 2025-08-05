@@ -1,5 +1,6 @@
 import AboutMeSection from "../components/sections/AboutMeSection";
 import HeroSection from "../components/sections/HeroSection";
+import QuoteSection from "../components/sections/QuoteSection";
 
 const Home = () => {
   return (
@@ -8,6 +9,7 @@ const Home = () => {
       <div className="mx-5 md:mx-16">
         <AboutMeSection />
       </div>
+      <QuoteSection />
     </>
   );
 };
