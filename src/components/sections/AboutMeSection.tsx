@@ -3,7 +3,7 @@ import CodingPic from "../../assets/photos/Gem Coding.png";
 
 const AboutMeSection = () => {
   return (
-    <section className="mt-14 h-auto">
+    <section className="mt-14 h-auto mx-5 md:mx-16">
       <Title
         header="About Me"
         linkTitle="Get to know me more"
