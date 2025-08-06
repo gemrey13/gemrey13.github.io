@@ -3,18 +3,20 @@ import CodingPic from "../../assets/photos/Gem Coding.png";
 
 const AboutMeSection = () => {
   return (
-    <section className="mt-14 h-auto mx-5 md:mx-16">
+    <section className="mx-5 mt-14 h-auto md:mx-14 md:mt-32 lg:mx-36">
       <Title
         header="About Me"
         linkTitle="Get to know me more"
         internalLink="asdas"
       />
-      <div className="font-droid text-secondary my-6 flex flex-col-reverse md:mx-4 md:my-10 md:flex-row justify-center items-center md:space-x-24">
+      <div className="font-droid text-secondary my-6 flex flex-col-reverse items-center justify-center md:my-16 md:flex-row md:space-x-24">
+        <div className="md:h-1/2">
           <img
             src={CodingPic}
             alt="Gem Coding in a desktop environment"
-            className="h-auto w-80"
+            className="h-auto w-full"
           />
+        </div>
         <article className="flex flex-col space-y-5 md:w-[40%] md:text-lg/8">
           <p>
             I'm a <span className="font-bold">full-stack web developer</span>,
@@ -34,7 +36,7 @@ const AboutMeSection = () => {
             to learn, grow, and build meaningful projects.
           </p>
 
-          <p className="mb-6">
+          <p className="pb-4 md:pb-0">
             My educational background includes a Bachelor of Science in
             Information Technology from Dalubhasaan ng Lungsod ng Lucena, where
             I was recognized as the{" "}
