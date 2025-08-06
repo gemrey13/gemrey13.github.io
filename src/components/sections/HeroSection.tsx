@@ -61,8 +61,8 @@ const HeroSection = () => {
   return (
     <section className="grid mt-4 h-[80%] md:mt-0 md:grid-cols-2">
       {/* Text Section */}
-      <div className="mx-5 my-8 flex flex-col justify-center space-y-6 md:mx-16">
-        <h1 className="relative pb-8 text-2xl font-semibold md:pb-12 md:text-5xl">
+      <div className="mx-5 my-8 flex flex-col justify-center space-y-6 md:mx-14 lg:ml-24">
+        <h1 className="relative pb-8 text-2xl font-semibold md:pb-12 md:text-3xl lg:text-5xl">
           Hello, I'm Gem. <br />
           <AnimatePresence>
             <motion.span
@@ -82,7 +82,7 @@ const HeroSection = () => {
           </AnimatePresence>
         </h1>
 
-        <p className="text-secondary text-sm md:text-lg">
+        <p className="text-secondary text-sm md:text-md lg:text-lg">
           I'm a recent Bachelor in Information Technology <br />
           graduate with a specialization in web development.
         </p>
@@ -90,7 +90,7 @@ const HeroSection = () => {
           to="/Gem Rey Rañola.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-link w-fit text-lg font-semibold underline md:text-2xl"
+          className="text-link w-fit text-lg font-semibold underline md:text-lg lg:text-2xl"
         >
           Download My Résumé
         </Link>
