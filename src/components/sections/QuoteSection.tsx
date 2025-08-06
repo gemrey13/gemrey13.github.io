@@ -2,12 +2,12 @@ import { BiSolidQuoteSingleLeft } from "react-icons/bi";
 
 const QuoteSection = () => {
   return (
-    <section className="bg-quotebox mt-14 h-auto px-5 py-5 md:px-36 md:py-10">
+    <section className="bg-quotebox h-auto px-5 py-14 md:px-36 md:py-24 mt-14 md:mt-36">
       <div className="flex flex-row -space-x-2 text-xl text-white md:-space-x-4 md:text-3xl">
         <BiSolidQuoteSingleLeft />
         <BiSolidQuoteSingleLeft />
       </div>
-      <blockquote className="font-droid px-5 py-3 text-sm/relaxed text-white md:px-16 md:text-xl/relaxed">
+      <blockquote className="font-droid px-5 py-3 text-md/relaxed text-white md:px-16 md:text-2xl/relaxed">
         As a developer, I take a user-focused and practical approach to building
         solutions. I follow the SOLID principles to write clean, maintainable,
         and scalable code. I care about performance, usability, and long-term
