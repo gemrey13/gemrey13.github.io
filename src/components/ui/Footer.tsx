@@ -6,15 +6,17 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { Link } from "react-router-dom";
+import SocialIconLink from "../SEO/SocialIconLink";
 
 const Footer = () => {
   return (
-    <footer className="mt-14 bg-[#2E2E2E] px-5 py-10 text-white md:px-14 md:mt-32 lg:px-36">
+    <footer className="mt-14 bg-[#2E2E2E] px-5 py-10 text-white md:mt-28 md:px-14 lg:px-36">
       <div className="grid grid-cols-1 gap-10 md:grid-cols-4">
         {/* About Me */}
         <div>
           <h3 className="mb-3 font-bold uppercase">About Me</h3>
-          <p className="mb-4 text-sm text-gray-300">
+          <p className="text-footer mb-4 text-sm/relaxed">
             Recently graduated in Information Technology. Currently looking for
             opportunities in web and software development.
           </p>
@@ -24,19 +26,44 @@ const Footer = () => {
         {/* Navigation */}
         <div>
           <h3 className="mb-3 font-bold uppercase">Navigation</h3>
-          <ul className="space-y-1 text-sm text-gray-300">
-            <li>Home</li>
-            <li>About Me</li>
-            <li>Experience</li>
-            <li>Résumé</li>
-            <li>Blog</li>
+          <ul className="text-footer flex flex-col space-y-3 text-sm">
+            <Link
+              to="/"
+              className="transition-colors duration-300 hover:text-gray-300"
+            >
+              Home
+            </Link>
+            <Link
+              to="/"
+              className="transition-colors duration-300 hover:text-gray-300"
+            >
+              About Me
+            </Link>
+            <Link
+              to="/"
+              className="transition-colors duration-300 hover:text-gray-300"
+            >
+              Experience
+            </Link>
+            <Link
+              to="/"
+              className="transition-colors duration-300 hover:text-gray-300"
+            >
+              Résumé
+            </Link>
+            <Link
+              to="/"
+              className="transition-colors duration-300 hover:text-gray-300"
+            >
+              Blog
+            </Link>
           </ul>
         </div>
 
         {/* Contacts */}
         <div>
           <h3 className="mb-3 font-bold uppercase">Contacts</h3>
-          <ul className="space-y-2 text-sm text-gray-300">
+          <ul className="text-footer space-y-3 text-sm">
             <li className="flex items-center gap-2">
               <MdEmail /> gemreyranola@gmail.com
             </li>
@@ -44,9 +71,16 @@ const Footer = () => {
               <MdEmail /> gemreybandol@gmail.com
             </li>
             <li>
-              <a href="#" className="text-white underline hover:text-gray-300">
+              <Link
+                to="https://linkedin.com/in/codewgem"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                title="Visit my LinkedIn profile"
+                className="text-white underline hover:text-gray-300"
+              >
                 Connect on LinkedIn
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -55,11 +89,45 @@ const Footer = () => {
         <div>
           <h3 className="mb-3 font-bold uppercase">Follow Me Here</h3>
           <div className="flex gap-4 text-lg text-white">
-            <FaFacebookF />
-            <FaInstagram />
-            <FaLinkedinIn />
-            <FaTiktok />
-            <FaWhatsapp />
+            <SocialIconLink
+              href="https://facebook.com/codewgem"
+              label="Visit my Facebook profile"
+              title="Facebook"
+            >
+              <FaFacebookF />
+            </SocialIconLink>
+
+            <SocialIconLink
+              href="https://instagram.com/codewgem"
+              label="Visit my Instagram profile"
+              title="Instagram"
+            >
+              <FaInstagram />
+            </SocialIconLink>
+
+            <SocialIconLink
+              href="https://linkedin.com/in/codewgem"
+              label="Visit my LinkedIn profile"
+              title="LinkedIn"
+            >
+              <FaLinkedinIn />
+            </SocialIconLink>
+
+            <SocialIconLink
+              href="https://tiktok.com/@codewgem"
+              label="Visit my TikTok profile"
+              title="TikTok"
+            >
+              <FaTiktok />
+            </SocialIconLink>
+
+            <SocialIconLink
+              href="/"
+              label="Chat with me on WhatsApp"
+              title="WhatsApp"
+            >
+              <FaWhatsapp />
+            </SocialIconLink>
           </div>
         </div>
       </div>
@@ -71,9 +139,16 @@ const Footer = () => {
           <span className="font-semibold text-white">Gem Rey Rañola</span> | ©
           2025
         </p>
-        <a href="#" className="mt-2 text-white underline md:mt-0">
+        <Link
+          to="https://linkedin.com/in/codewgem"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+          title="Visit my LinkedIn profile"
+          className="mt-2 text-white underline md:mt-0"
+        >
           Connect on <strong>LinkedIn</strong>
-        </a>
+        </Link>
       </div>
     </footer>
   );

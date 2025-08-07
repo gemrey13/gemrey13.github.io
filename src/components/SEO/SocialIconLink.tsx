@@ -20,9 +20,9 @@ const SocialIconLink = ({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label={label}
-      title={title}
-      className={`transition-colors duration-300 hover:text-blue-500 ${className}`}
+      aria-label={title}
+      title={label}
+      className={`transition-colors duration-300 hover:text-gray-300 ${className}`}
     >
       {children}
     </a>
