@@ -13,13 +13,13 @@ const ProjectsSection = () => {
         internalLink="/projects"
       />
 
-      <div className="mt-10 grid gap-8 md:grid-cols-2 lg:grid-cols-3 overflow-hidden md:overflow-visible">
+      <div className="mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-3 overflow-x-hidden md:overflow-visible py-4">
         {/* DLL Alumni Card */}
         <motion.article
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: 100 }}
           transition={{ duration: 1, delay: 0 }}
-          className="overflow-hidden bg-white shadow-lg transition-shadow duration-300 hover:shadow-xl"
+          className="bg-white shadow-lg transition-shadow duration-300 hover:shadow-xl"
         >
           <img
             src={DLLAlumni}
@@ -30,7 +30,7 @@ const ProjectsSection = () => {
             <h2 className="mb-2 text-xl font-semibold">
               DLL Alumni Portal Web App
             </h2>
-            <p className="text-secondary font-droid mb-3 text-sm">
+            <p className="text-secondary font-droid mb-3 text-sm/relaxed">
               An online portal for alumni in DLL featuring tracer study and
               curriculum analysis.
             </p>
@@ -53,7 +53,7 @@ const ProjectsSection = () => {
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: 100 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="overflow-hidden bg-white shadow-lg transition-shadow duration-300 hover:shadow-xl"
+          className="bg-white shadow-lg transition-shadow duration-300 hover:shadow-xl"
         >
           <img
             src={Inventory}
@@ -64,7 +64,7 @@ const ProjectsSection = () => {
             <h2 className="mb-2 text-xl font-semibold">
               CBQP FFE Inventory System
             </h2>
-            <p className="text-secondary font-droid text-sm">
+            <p className="text-secondary font-droid text-sm/relaxed">
               An inventory management system developed for Cooperative Bank of
               Quezon Province to track Fixed Furniture and Equipment (FFE)
               within the organization.
@@ -77,7 +77,7 @@ const ProjectsSection = () => {
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: 100 }}
           transition={{ duration: 1, delay: 0.4 }}
-          className="overflow-hidden bg-white shadow-lg transition-shadow duration-300 hover:shadow-xl"
+          className="bg-white pb-6 shadow-lg transition-shadow duration-300 hover:shadow-xl"
         >
           <img
             src={Voting}
@@ -86,7 +86,7 @@ const ProjectsSection = () => {
           />
           <div className="p-5">
             <h2 className="mb-2 text-xl font-semibold">CBQP Voting System</h2>
-            <p className="text-secondary font-droid text-sm">
+            <p className="text-secondary font-droid text-sm/relaxed">
               A voting application designed for Cooperative Bank of Quezon
               Province to facilitate cooperative decision-making processes.
             </p>
