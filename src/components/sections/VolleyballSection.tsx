@@ -1,10 +1,17 @@
 import GemBlock from "../../assets/photos/Gem block pic.png";
 import TeamPic from "../../assets/photos/Volleyball team pic.png";
+import { motion } from "framer-motion";
 
 const VolleyballSection = () => {
   return (
     <section>
-      <article className="text-secondary grid grid-cols-1 space-y-5 md:grid-cols-[65%_35%]">
+      <motion.article
+        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, x: -100 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        className="text-secondary grid grid-cols-1 space-y-5 md:grid-cols-[65%_35%]"
+      >
         <div className="font-droid flex flex-col gap-5 md:text-xl/relaxed">
           <div className="font-ubuntu mt-7 py-2 text-black">
             <h2 className="text-xl font-semibold md:text-3xl">
@@ -50,7 +57,7 @@ const VolleyballSection = () => {
             alt="Team photo of BSIT Golden Huskies volleyball team"
           />
         </div>
-      </article>
+      </motion.article>
     </section>
   );
 };
