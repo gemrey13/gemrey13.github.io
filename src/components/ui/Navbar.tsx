@@ -15,10 +15,10 @@ const Navbar = () => {
 
         <ul className="flex space-x-5 text-gray-700 md:space-x-10">
           <li>
-            <NavItemLink to="#" label="Projects" />
+            <NavItemLink to="/projects" label="Projects" />
           </li>
           <li>
-            <NavItemLink to="#" label="About" />
+            <NavItemLink to="/about-me" label="About" />
           </li>
           <li>
             <NavItemLink
