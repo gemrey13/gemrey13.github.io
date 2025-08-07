@@ -1,4 +1,5 @@
 import { FaLink } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 interface EventCardProps {
   image: string;
@@ -18,7 +19,13 @@ const EventCard = ({
   alt,
 }: EventCardProps) => {
   return (
-    <article className="bg-white transition-shadow duration-300 hover:shadow-xl">
+    <motion.article
+      whileInView={{ opacity: 1, x: 0 }}
+      initial={{ opacity: 0, x: 100 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: true }}
+      className="bg-white transition-shadow duration-300 hover:shadow-xl"
+    >
       <img
         src={image}
         alt={alt || title}
@@ -60,7 +67,7 @@ const EventCard = ({
           </div>
         )}
       </div>
-    </article>
+    </motion.article>
   );
 };
 
