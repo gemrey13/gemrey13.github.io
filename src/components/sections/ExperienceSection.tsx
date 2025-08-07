@@ -77,7 +77,7 @@ const ExperienceSection = () => {
             <h3>Information Technology Intern</h3>
             <h3>Cooperative Bank of Quezon Province</h3>
             <h6 className="font-normal md:text-lg">
-              <em>March 2024 - June 2024</em>
+              <em>March 2025 - June 2025</em>
             </h6>
           </div>
 

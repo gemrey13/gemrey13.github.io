@@ -46,7 +46,9 @@ const Footer = () => {
               Experience
             </Link>
             <Link
-              to="/"
+              to="/Gem Rey Rañola.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="transition-colors duration-300 hover:text-gray-300"
             >
               Résumé
