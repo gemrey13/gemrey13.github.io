@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { FiArrowRight } from "react-icons/fi";
 
 interface TitleProps {
   header: string;
@@ -19,8 +20,12 @@ const Title = ({ header, linkTitle, internalLink }: TitleProps) => {
     >
       <h2 className="text-xl font-semibold md:text-3xl">{header}</h2>
       {linkTitle && internalLink ? (
-        <Link to={internalLink} className="text-sm underline md:text-base">
+        <Link
+          to={internalLink}
+          className="hover:text-secondary text-sm transition-colors duration-300 md:text-base flex gap-1 items-center"
+        >
           {linkTitle}
+          <FiArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
         </Link>
       ) : null}
     </motion.div>

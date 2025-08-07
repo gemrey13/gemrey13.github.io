@@ -7,7 +7,7 @@ const AboutMeSection = () => {
       <Title
         header="About Me"
         linkTitle="Get to know me more"
-        internalLink="asdas"
+        internalLink="/about-me"
       />
       <AboutMeInfo />
     </section>
