@@ -2,7 +2,7 @@ import Title from "../ui/Title"
 
 const ProjectsSection = () => {
   return (
-    <section className="mt-14 mx-5 md:mx-16">
+    <section className="mx-5 mt-14 md:mx-14 md:mt-20 lg:mx-36">
       <Title
         header="Projects"
         linkTitle="Explore my work"

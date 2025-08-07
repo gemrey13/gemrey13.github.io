@@ -11,7 +11,7 @@ const Home = () => {
       <AboutMeSection />
       <QuoteSection />
       <ExperienceSection />
-      <hr className="mx-5 border-gray-300 md:mx-16" />
+      <hr className="mx-5 mt-14 border-gray-300 md:mx-14 lg:mx-36 md:mt-24" />
       <ProjectsSection />
     </>
   );
