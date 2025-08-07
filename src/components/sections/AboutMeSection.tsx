@@ -10,7 +10,7 @@ const AboutMeSection = () => {
         linkTitle="Get to know me more"
         internalLink="asdas"
       />
-      <div className="font-droid text-secondary my-6 flex flex-col-reverse items-center justify-center md:my-20 md:flex-row md:space-x-24">
+      <div className="font-droid text-secondary my-6 flex flex-col-reverse items-center justify-center md:my-16 md:flex-row md:space-x-24">
         <motion.img
           src={CodingPic}
           alt="Gem Coding in a desktop environment"

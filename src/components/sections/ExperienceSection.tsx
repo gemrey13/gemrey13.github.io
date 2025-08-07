@@ -2,15 +2,20 @@ import Title from "../ui/Title";
 import GemMiru from "../../assets/photos/Gem Miru Pic.png";
 import SystemDemo from "../../assets/photos/System Demo Pic.png";
 import SystemPresentation from "../../assets/photos/System Presentation Pic.png";
+import { motion } from "framer-motion";
 
 const ExperienceSection = () => {
   return (
-    <section className="mx-5 mt-14 md:mx-16">
+    <section className="mx-5 mt-14 md:mx-14 md:mt-32 lg:mx-36">
       <Title header="Experience" />
 
-      <article className="my-6 flex flex-col-reverse items-center md:mx-auto md:my-10 md:w-10/12 md:flex-row md:space-x-10">
+      <article className="my-6 flex flex-col-reverse items-center justify-between overflow-hidden md:mx-auto md:my-14 md:flex-row md:space-x-10">
         <img src={GemMiru} alt="Grid Picture of Gem Working onsite." />
-        <aside>
+        <motion.aside
+          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: 100 }}
+          transition={{ duration: 1 }}
+        >
           <div className="pb-3 text-lg font-semibold md:text-2xl">
             <h3 className="">Canvassing and Consolidation Tech Support</h3>
             <h3>MIRU</h3>
@@ -43,12 +48,12 @@ const ExperienceSection = () => {
               democratic processes.
             </p>
           </div>
-        </aside>
+        </motion.aside>
       </article>
 
-      <article className="my-6 flex flex-col-reverse items-center md:mx-auto md:my-10 md:w-10/12 md:flex-row-reverse md:space-x-10">
+      <article className="my-10 flex flex-col-reverse items-center justify-between overflow-hidden md:mx-auto md:my-14 md:flex-row-reverse md:space-x-10">
         {/* Image Section */}
-        <div className="mx-auto flex flex-col items-center md:w-1/2">
+        <div className="mx-auto flex flex-col items-end md:w-1/2">
           <img
             src={SystemDemo}
             alt="Grid Picture of Gem Working onsite."
@@ -62,7 +67,12 @@ const ExperienceSection = () => {
         </div>
 
         {/* Text Section */}
-        <aside className="flex flex-col justify-between md:w-1/2">
+        <motion.aside
+          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: -100 }}
+          transition={{ duration: 1 }}
+          className="flex flex-col justify-between md:w-1/2"
+        >
           <div className="pb-3 text-lg font-semibold md:text-2xl">
             <h3>Information Technology Intern</h3>
             <h3>Cooperative Bank of Quezon Province</h3>
@@ -96,7 +106,7 @@ const ExperienceSection = () => {
               infrastructure in a real-world organizational setting.
             </p>
           </div>
-        </aside>
+        </motion.aside>
       </article>
     </section>
   );
