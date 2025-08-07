@@ -15,6 +15,7 @@ const ExperienceSection = () => {
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: 100 }}
           transition={{ duration: 1 }}
+          viewport={{ once: true }}
         >
           <div className="pb-3 text-lg font-semibold md:text-2xl">
             <h3 className="">Canvassing and Consolidation Tech Support</h3>
@@ -71,6 +72,7 @@ const ExperienceSection = () => {
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: -100 }}
           transition={{ duration: 1 }}
+          viewport={{ once: true }}
           className="flex flex-col justify-between md:w-1/2"
         >
           <div className="pb-3 text-lg font-semibold md:text-2xl">

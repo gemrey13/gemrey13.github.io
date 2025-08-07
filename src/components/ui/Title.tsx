@@ -14,6 +14,7 @@ const Title = ({ header, linkTitle, internalLink }: TitleProps) => {
       whileInView={{ opacity: 1, y: 0 }}
       initial={{ opacity: 0, y: -100 }}
       transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
       className={
         internalLink && linkTitle ? "flex items-baseline justify-between" : ""
       }
@@ -22,7 +23,7 @@ const Title = ({ header, linkTitle, internalLink }: TitleProps) => {
       {linkTitle && internalLink ? (
         <Link
           to={internalLink}
-          className="hover:text-secondary text-sm transition-colors duration-300 md:text-base flex gap-1 items-center"
+          className="hover:text-secondary flex items-center gap-1 text-sm transition-colors duration-300 md:text-base"
         >
           {linkTitle}
           <FiArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />

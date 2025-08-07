@@ -5,12 +5,13 @@ import { motion } from "framer-motion";
 
 const ProjectItems = () => {
   return (
-    <div className="mt-8 grid gap-8 overflow-x-hidden py-4 md:grid-cols-2 md:overflow-visible lg:grid-cols-3">
+    <div className="mt-8 grid gap-8 overflow-x-hidden py-6 md:grid-cols-2 md:overflow-visible lg:grid-cols-3">
       {/* DLL Alumni Card */}
       <motion.article
         whileInView={{ opacity: 1, x: 0 }}
         initial={{ opacity: 0, x: 100 }}
         transition={{ duration: 1, delay: 0 }}
+        viewport={{ once: true }}
         className="bg-white shadow-lg transition-shadow duration-300 hover:shadow-xl"
       >
         <img
@@ -45,6 +46,7 @@ const ProjectItems = () => {
         whileInView={{ opacity: 1, x: 0 }}
         initial={{ opacity: 0, x: 100 }}
         transition={{ duration: 1, delay: 0.2 }}
+        viewport={{ once: true }}
         className="bg-white shadow-lg transition-shadow duration-300 hover:shadow-xl"
       >
         <img
@@ -69,6 +71,7 @@ const ProjectItems = () => {
         whileInView={{ opacity: 1, x: 0 }}
         initial={{ opacity: 0, x: 100 }}
         transition={{ duration: 1, delay: 0.4 }}
+        viewport={{ once: true }}
         className="bg-white pb-6 shadow-lg transition-shadow duration-300 hover:shadow-xl"
       >
         <img
