@@ -1,4 +1,5 @@
 import AboutMeInfo from "../components/list/AboutMeInfo";
+import EventsSection from "../components/sections/EventsSection";
 import GuitarArtSection from "../components/sections/GuitarArtSection";
 import VolleyballSection from "../components/sections/VolleyballSection";
 import Title from "../components/ui/Title";
@@ -17,6 +18,8 @@ const AboutMe = () => {
       <GuitarArtSection />
 
       <hr className="my-14 border-gray-300 md:my-24" />
+
+      <EventsSection />
 
     </section>
   );
