@@ -35,13 +35,19 @@ const Footer = () => {
               Home
             </Link>
             <Link
-              to="/"
+              to="/about-me"
               className="transition-colors duration-300 hover:text-gray-300"
             >
               About Me
             </Link>
+            <Link
+              to="/projects"
+              className="transition-colors duration-300 hover:text-gray-300"
+            >
+              Projects
+            </Link>
             <HashLink
-            smooth
+              smooth
               to="/#experience"
               className="transition-colors duration-300 hover:text-gray-300"
             >
