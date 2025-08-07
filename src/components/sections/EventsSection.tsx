@@ -20,6 +20,13 @@ const EventsSection = () => {
           mainLink="https://www.facebook.com/share/p/1GAK6Y5kmR/"
           title="Open iT Hackathon Codefest 2025"
           description="Joined a 2-day hackathon where our team built a real-world solution focused on gamifying team motivation and engagement. We collaborated under pressure to turn ideas into a working prototype that tackled performance through play."
+                  links={[
+            {
+              label: "Event Recap Video",
+              url: "https://www.facebook.com/share/v/1C5yd21Rb1/",
+            },
+  
+          ]}
         />
 
         <EventCard
