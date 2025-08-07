@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const ExperienceSection = () => {
   return (
-    <section className="mx-5 mt-14 md:mx-14 md:mt-32 lg:mx-36">
+    <section className="mx-5 mt-14 md:mx-14 md:mt-32 lg:mx-36" id="experience">
       <Title header="Experience" />
 
       <article className="my-6 flex flex-col-reverse items-center justify-between overflow-hidden md:mx-auto md:my-14 md:flex-row md:space-x-10">

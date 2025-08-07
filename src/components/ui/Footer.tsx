@@ -7,6 +7,7 @@ import {
 } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import SocialIconLink from "../SEO/SocialIconLink";
 
 const Footer = () => {
@@ -39,12 +40,13 @@ const Footer = () => {
             >
               About Me
             </Link>
-            <Link
-              to="/"
+            <HashLink
+            smooth
+              to="/#experience"
               className="transition-colors duration-300 hover:text-gray-300"
             >
               Experience
-            </Link>
+            </HashLink>
             <Link
               to="/Gem Rey Rañola.pdf"
               target="_blank"

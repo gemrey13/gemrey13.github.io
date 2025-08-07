@@ -2,7 +2,7 @@ import { BiSolidQuoteSingleLeft } from "react-icons/bi";
 
 const QuoteSection = () => {
   return (
-    <section className="bg-quotebox h-auto px-5 py-14 md:px-36 md:py-24 mt-14 md:mt-36">
+    <section className="bg-quotebox h-auto px-5 py-20 md:px-36 md:py-24 mt-14 md:mt-36">
       <div className="flex flex-row -space-x-2 text-xl text-white md:-space-x-4 md:text-3xl">
         <BiSolidQuoteSingleLeft />
         <BiSolidQuoteSingleLeft />
