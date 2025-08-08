@@ -22,7 +22,7 @@ const Navbar = () => {
           </li>
           <li>
             <NavItemLink
-              to="/Gem Rey Rañola.pdf"
+              to="/Gem - CV.pdf"
               label="Résumé"
               isExternal={true}
             />

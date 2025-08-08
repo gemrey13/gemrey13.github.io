@@ -54,7 +54,7 @@ const Footer = () => {
               Experience
             </HashLink>
             <Link
-              to="/Gem Rey Rañola.pdf"
+              to="/Gem - CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="transition-colors duration-300 hover:text-gray-300"
