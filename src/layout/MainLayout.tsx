@@ -1,21 +1,18 @@
-import { Outlet } from "react-router-dom";
+import React from "react";
 import Navbar from "../components/ui/Navbar";
 import Footer from "../components/ui/Footer";
 import ScrollToTop from "../components/SEO/ScrollToTop";
-import { Suspense } from "react";
-import Loader from "../components/ui/Loader";
 
-const MainLayout = () => {
+interface Props {
+  children: React.ReactNode;
+}
+
+const MainLayout: React.FC<Props> = ({ children }) => {
   return (
     <div className="font-ubuntu">
       <ScrollToTop />
-
       <Navbar />
-      <main>
-        <Suspense fallback={<Loader />}>
-          <Outlet />
-        </Suspense>
-      </main>
+      <main>{children}</main>
       <Footer />
     </div>
   );

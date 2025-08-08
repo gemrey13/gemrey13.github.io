@@ -1,11 +1,10 @@
-import { RouterProvider } from "react-router-dom";
 import { createRoot } from "react-dom/client";
-import { router } from "./routes";
-import "./assets/css/index.css";
 import { HelmetProvider } from "react-helmet-async";
+import "./assets/css/index.css";
+import AppRouter from "./AppRouter";
 
 createRoot(document.getElementById("root")!).render(
   <HelmetProvider>
-    <RouterProvider router={router} />
+    <AppRouter />
   </HelmetProvider>,
 );

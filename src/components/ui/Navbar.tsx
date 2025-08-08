@@ -21,11 +21,7 @@ const Navbar = () => {
             <NavItemLink to="/about-me" label="About" />
           </li>
           <li>
-            <NavItemLink
-              to="/Gem - CV.pdf"
-              label="Résumé"
-              isExternal={true}
-            />
+            <NavItemLink to="/Gem-CV.pdf" label="Résumé" isExternal={true} />
           </li>
         </ul>
 

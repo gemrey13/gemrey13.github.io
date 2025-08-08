@@ -53,14 +53,14 @@ const Footer = () => {
             >
               Experience
             </HashLink>
-            <Link
-              to="/Gem - CV.pdf"
+            <a
+              href="/Gem-CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="transition-colors duration-300 hover:text-gray-300"
             >
               Résumé
-            </Link>
+            </a>
             <Link
               to="/"
               className="transition-colors duration-300 hover:text-gray-300"
