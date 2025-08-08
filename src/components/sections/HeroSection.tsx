@@ -87,7 +87,7 @@ const HeroSection = () => {
           graduate with a specialization in web development.
         </p>
         <Link
-          to="/Gem Rey Rañola.pdf"
+          to="/Gem - CV.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="text-link w-fit text-lg font-semibold underline md:text-lg lg:text-2xl"
