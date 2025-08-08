@@ -105,13 +105,13 @@ const HeroSection = () => {
         />
 
         {/* Social Icons */}
-        <div className="absolute right-5 bottom-5 flex space-x-6 text-2xl text-white md:text-3xl">
+        <div className="absolute right-5 bottom-5 flex space-x-3 text-2xl text-white md:text-3xl">
           <SocialIconLink
             href="https://facebook.com/codewgem"
             label="Visit my Facebook profile"
             title="Facebook"
           >
-            <FaFacebook />
+            <FaFacebook className="text-xl md:text-3xl"/>
           </SocialIconLink>
 
           <SocialIconLink
@@ -119,7 +119,7 @@ const HeroSection = () => {
             label="Visit my Instagram profile"
             title="Instagram"
           >
-            <FaInstagram />
+            <FaInstagram className="text-xl md:text-3xl" />
           </SocialIconLink>
 
           <SocialIconLink
@@ -127,7 +127,7 @@ const HeroSection = () => {
             label="Visit my LinkedIn profile"
             title="LinkedIn"
           >
-            <FaLinkedin />
+            <FaLinkedin className="text-xl md:text-3xl" />
           </SocialIconLink>
 
           <SocialIconLink
@@ -135,7 +135,7 @@ const HeroSection = () => {
             label="Visit my TikTok profile"
             title="TikTok"
           >
-            <FaTiktok />
+            <FaTiktok className="text-xl md:text-3xl" />
           </SocialIconLink>
 
           <SocialIconLink
@@ -143,7 +143,7 @@ const HeroSection = () => {
             label="Chat with me on WhatsApp"
             title="WhatsApp"
           >
-            <FaWhatsapp />
+            <FaWhatsapp className="text-xl md:text-3xl" />
           </SocialIconLink>
         </div>
       </div>
