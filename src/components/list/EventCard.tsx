@@ -1,5 +1,5 @@
 import { FaLink } from "react-icons/fa";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 interface EventCardProps {
   image: string;

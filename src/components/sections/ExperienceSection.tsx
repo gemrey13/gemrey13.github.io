@@ -2,7 +2,7 @@ import Title from "../ui/Title";
 import GemMiru from "../../assets/photos/Gem Miru Pic.png";
 import SystemDemo from "../../assets/photos/System Demo Pic.png";
 import SystemPresentation from "../../assets/photos/System Presentation Pic.png";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 const ExperienceSection = () => {
   return (

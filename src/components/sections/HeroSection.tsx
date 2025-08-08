@@ -8,7 +8,7 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 import SocialIconLink from "../SEO/SocialIconLink";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";
 
 type Direction = number;

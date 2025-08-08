@@ -1,6 +1,6 @@
 import GemBlock from "../../assets/photos/Gem block pic.png";
 import TeamPic from "../../assets/photos/Volleyball team pic.png";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 const VolleyballSection = () => {
   return (

@@ -6,7 +6,7 @@ import Title from "../components/ui/Title";
 
 const AboutMe = () => {
   return (
-    <section className="mx-5 mt-14 md:mx-14 md:mt-20 lg:mx-36 overflow-x-hidden">
+    <section className="mx-5 mt-14 md:mx-14 md:mt-36 lg:mx-36 overflow-x-hidden">
       <h1 className="text-xl font-semibold md:text-3xl">About Me</h1>
       <AboutMeInfo />
 
