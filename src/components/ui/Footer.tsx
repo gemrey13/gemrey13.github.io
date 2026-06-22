@@ -147,7 +147,7 @@ const Footer = () => {
         <p>
           Coded & designed by{" "}
           <span className="font-semibold text-white">Gem Rey Rañola</span> | ©
-          2025
+          2026
         </p>
         <Link
           to="https://linkedin.com/in/codewgem"

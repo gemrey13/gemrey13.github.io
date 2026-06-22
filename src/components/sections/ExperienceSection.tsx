@@ -2,12 +2,65 @@ import Title from "../ui/Title";
 import GemMiru from "../../assets/photos/Gem Miru Pic.png";
 import SystemDemo from "../../assets/photos/System Demo Pic.png";
 import SystemPresentation from "../../assets/photos/System Presentation Pic.png";
+import Outing from "../../assets/photos/outing.jpg";
+import GiligansWork from "../../assets/photos/recon-work.png";
 import { motion } from "motion/react";
 
 const ExperienceSection = () => {
   return (
     <section className="mx-5 mt-14 md:mx-14 md:mt-32 lg:mx-36" id="experience">
       <Title header="Experience" />
+
+      <article className="my-10 flex flex-col-reverse items-center justify-between overflow-hidden md:mx-auto md:my-14 md:flex-row-reverse md:space-x-10">
+        {/* Image Section */}
+        <div className="mx-auto flex flex-col items-end md:w-1/2 ">
+          <img
+            src={GiligansWork}
+            alt="Gi-Recon app interface in production at Giligan's."
+            className="w-full max-w-md object-contain"
+          />
+          <img
+            src={Outing}
+            alt="Team outing of Alquiros teams."
+            className="w-full max-w-md object-contain"
+          />
+        </div>
+
+        {/* Text Section */}
+        <motion.aside
+          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: -100 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+          className="flex flex-col justify-between md:w-1/2"
+        >
+          <div className="pb-3 text-lg font-semibold md:text-2xl">
+            <h3>Information Technology Staff (developer)</h3>
+            <h3>Alquiros Food Corporation</h3>
+            <h6 className="font-normal md:text-lg">
+              <em>October 2025 - Present</em>
+            </h6>
+          </div>
+
+          <div className="font-droid text-secondary flex flex-col space-y-3 pb-3 md:text-lg/8">
+            <p>
+              I developed core internal programs for the company. Developer 
+              for Gi-Recon, a desktop application built with React, Typescript, 
+              and Electron. The Gi-Recon developed over a four-month period for
+              the accounting abd logistics depertments to automate reconciliation,
+              matching third party data partners like (Foodpanda and GrabFood) against
+              the restaurant POS system as the source of truth.
+            </p>
+
+            <p>
+              Alongside system development, I also one of the responsible for maintaning 
+              and supporting core systems, including the legacy 32-bit FoxPro POS system.
+              Learned the legacy codebase within a one month timeline to ensure continuous 
+              technical support and system updates.
+            </p>
+          </div>
+        </motion.aside>
+      </article>
 
       <article className="my-6 flex flex-col-reverse items-center justify-between overflow-hidden md:mx-auto md:my-14 md:flex-row md:space-x-10">
         <img src={GemMiru} alt="Grid Picture of Gem Working onsite." />
