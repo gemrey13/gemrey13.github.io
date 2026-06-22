@@ -21,9 +21,9 @@ const Head: React.FC<HeadProps> = ({
   image = "",
   type = "website",
   twitterCard = "summary_large_image",
-  siteName = "Gem | Web Developer & Software Developer",
+  siteName = "Code with Gem",
 }) => {
-  const fullTitle = title ? `${title} - ${siteName}` : siteName;
+  const fullTitle = title ? `${title} | ${siteName}` : siteName;
 
   return (
     <Helmet>
