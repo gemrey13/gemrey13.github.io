@@ -1,5 +1,6 @@
 import Title from "../ui/Title";
 import TeamPicOpenIT from "../../assets/photos/team pic.png";
+import AzureBuild from "../../assets/photos/Azure-Build.jpg";
 import FilmFest from "../../assets/photos/Film Fest Group pic.png";
 import Summit from "../../assets/photos/Summit Group Pic.png";
 import AssemblyPic from "../../assets/photos/Developer pic.png";
@@ -15,6 +16,13 @@ const EventsSection = () => {
       <Title header="Where I've Shown Up" />
 
       <div className="grid grid-cols-1 gap-12 py-8 md:grid-cols-3 md:py-12">
+        <EventCard
+          image={AzureBuild}
+          mainLink="https://www.facebook.com/share/p/1ByMwrELcw/"
+          title="Microsoft Build //localhost:manila"
+          description="Attended Microsoft Build //localhost:manila, diving into next-gen AI application development. Explored cutting edge strategies for building scalable AI agents, designing AI ready databases, managing model costs in Foundry, and automating dev pipelines from CLI to PR."
+        />
+
         <EventCard
           image={TeamPicOpenIT}
           mainLink="https://www.facebook.com/share/p/1GAK6Y5kmR/"
