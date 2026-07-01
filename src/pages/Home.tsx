@@ -19,8 +19,8 @@ const Home = () => {
 
       <HeroSection />
       <AboutMeSection />
-      <CredlySection />
       <QuoteSection />
+      <CredlySection />
       <ExperienceSection />
       <hr className="mx-5 mt-14 border-gray-300 md:mx-14 md:mt-24 lg:mx-36" />
       <ProjectsSection />
