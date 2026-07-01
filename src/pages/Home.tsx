@@ -5,6 +5,7 @@ import ProjectsSection from "../components/sections/ProjectsSection";
 import QuoteSection from "../components/sections/QuoteSection";
 import Head from "../components/SEO/Head";
 import MeCoding from "../assets/photos/Gem Coding.png";
+import CredlySection from "../components/sections/CredlySection";
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
 
       <HeroSection />
       <AboutMeSection />
+      <CredlySection />
       <QuoteSection />
       <ExperienceSection />
       <hr className="mx-5 mt-14 border-gray-300 md:mx-14 md:mt-24 lg:mx-36" />
