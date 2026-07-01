@@ -1,6 +1,7 @@
 import Title from "../ui/Title";
 import TeamPicOpenIT from "../../assets/photos/team pic.png";
 import AzureBuild from "../../assets/photos/Azure-Build.jpg";
+import Drupal from "../../assets/photos/drupal.jpg";
 import FilmFest from "../../assets/photos/Film Fest Group pic.png";
 import Summit from "../../assets/photos/Summit Group Pic.png";
 import AssemblyPic from "../../assets/photos/Developer pic.png";
@@ -21,6 +22,13 @@ const EventsSection = () => {
           mainLink="https://www.facebook.com/share/p/1ByMwrELcw/"
           title="Microsoft Build //localhost:manila"
           description="Attended Microsoft Build //localhost:manila, diving into next-gen AI application development. Explored cutting edge strategies for building scalable AI agents, designing AI ready databases, managing model costs in Foundry, and automating dev pipelines from CLI to PR."
+        />
+
+        <EventCard
+          image={Drupal}
+          mainLink="https://www.facebook.com/share/p/1JGVV33vbf/"
+          title="Drupal Meetup, Makati City"
+          description="Attended the March 2026 Drupal Meetup to network with teams using Drupal in enterprise environments. Swapped insights on CMS vs Core architectures, welcomed new developers, and connected with the community for future speaking opportunities."
         />
 
         <EventCard
