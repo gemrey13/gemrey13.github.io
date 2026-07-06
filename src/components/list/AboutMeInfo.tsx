@@ -20,7 +20,7 @@ const AboutMeInfo = () => {
           transition={{ duration: 1, delay: 0 }}
           viewport={{ once: true }}
         >
-          I'm a <span className="font-bold">full-stack web developer</span>,
+          I'm a <span className="font-bold">Software Developer</span>,
           focused on building responsive and user-friendly applications. I
           started with a love for coding and grew curious about how tech solves
           real-world problems. That curiosity led me to explore both frontend
@@ -35,11 +35,12 @@ const AboutMeInfo = () => {
           viewport={{ once: true }}
         >
           I see myself as a{" "}
-          <span className="font-bold">developer-leader hybrid</span>. I founded
+          <span className="font-bold">community driven developer</span>. I founded
           a student organization that trains others in tech and event support.
-          I've also represented my region in national hackathons. I'm passionate
-          about creating tools that make an impact—and always eager to learn,
-          grow, and build meaningful projects.
+          I've also represented my region in national hackathons. Currently, I'm
+          deepening my expertise in <span className="font-bold">cloud infrastructure</span>{" "}
+          and exploring the cutting edge of <span className="font-bold">agentic coding AI</span>.
+          I'm always eager to learn, grow, and build meaningful projects.
         </motion.p>
 
         <motion.p
@@ -54,8 +55,8 @@ const AboutMeInfo = () => {
           was recognized as the{" "}
           <span className="font-bold">Most Promising IT Practitioner</span>. The
           experience allowed me to turn concepts learned in the comlabs into
-          real technical skills, building a strong foundation in web development
-          and problem-solving.
+          real technical skills, building a strong foundation in Software Development
+          and problem solving.
         </motion.p>
       </article>
     </div>
