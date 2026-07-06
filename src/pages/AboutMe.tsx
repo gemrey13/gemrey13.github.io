@@ -10,11 +10,13 @@ const AboutMe = () => {
   return (
     <>
       <Head
-        title="About Me"
-        description="Learn more about Gem Rey — a passionate software engineer specializing in web development, React, TypeScript, Django, and creating innovative digital solutions."
-        keywords="Gem Rey, about Gem Rey, about Gem, about me, software engineer, web developer, React, TypeScript, Django, portfolio, coding, software development, Python"
+        title="About Code with Gem"
+        description="Portfolio of Gem Rey: A Software Developer specializing in application development, web security audits, and full-stack engineering."
+        keywords="Gem Rey, Gem, software engineer, Software Developer, React, JavaScript, TypeScript, portfolio, projects, Django, Python, web design, coding, software development"
         image={MeCoding}
       />
+
+
       <section className="mx-5 mt-14 overflow-x-hidden md:mx-14 md:mt-36 lg:mx-36">
         <h1 className="text-xl font-semibold md:text-3xl">About Me</h1>
         <AboutMeInfo />
