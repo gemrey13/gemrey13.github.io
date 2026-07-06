@@ -84,8 +84,8 @@ const HeroSection = () => {
         </h1>
 
         <p className="text-secondary text-sm md:text-md lg:text-lg">
-          I'm a recent Bachelor in Information Technology <br />
-          graduate with a specialization in Software Development.
+          Bachelor of Science in Information Technology Graduate, <br />
+          specializing in Software Development and Cloud Infrastructure.
         </p>
         <Link
           to="/Gem - CV.pdf"
