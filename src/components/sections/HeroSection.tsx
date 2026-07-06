@@ -16,7 +16,7 @@ type Direction = number;
 const texts = [
   "Nice to meet you!",
   "Powered by Milo ☕.",
-  "It works on my machine 🤷‍♂️.",
+  "It works on my PC 🤷‍♂️.",
   "Hire me, please 🙏!",
   "Full-Stack Developer 🧑‍💻.",
   "Code. Sleep. Repeat.",
