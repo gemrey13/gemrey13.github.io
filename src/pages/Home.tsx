@@ -12,8 +12,8 @@ const Home = () => {
     <>
       <Head
         title="Home"
-        description="Portfolio of Gem Rey: A Web Developer specializing in application development, web security audits, and full-stack engineering."
-        keywords="Gem Rey, Gem, software engineer, web developer, React, JavaScript, TypeScript, portfolio, projects, Django, Python, web design, coding, software development"
+        description="Portfolio of Gem Rey: A Software Developer specializing in application development, web security audits, and full-stack engineering."
+        keywords="Gem Rey, Gem, software engineer, Software Developer, React, JavaScript, TypeScript, portfolio, projects, Django, Python, web design, coding, software development"
         image={MeCoding}
       />
 

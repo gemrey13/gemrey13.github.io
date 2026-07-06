@@ -15,7 +15,8 @@ type Direction = number;
 
 const texts = [
   "Nice to meet you!",
-  "Powered by Chocolate ☕.",
+  "Powered by Milo ☕.",
+  "It works on my machine 🤷‍♂️.",
   "Hire me, please 🙏!",
   "Full-Stack Developer 🧑‍💻.",
   "Code. Sleep. Repeat.",
@@ -84,7 +85,7 @@ const HeroSection = () => {
 
         <p className="text-secondary text-sm md:text-md lg:text-lg">
           I'm a recent Bachelor in Information Technology <br />
-          graduate with a specialization in web development.
+          graduate with a specialization in Software Development.
         </p>
         <Link
           to="/Gem - CV.pdf"
