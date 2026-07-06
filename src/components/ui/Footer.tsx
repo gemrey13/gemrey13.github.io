@@ -18,8 +18,8 @@ const Footer = () => {
         <div>
           <h3 className="mb-3 font-bold uppercase">About Me</h3>
           <p className="text-footer mb-4 text-sm/relaxed">
-            Recently graduated in Information Technology. Currently looking for
-            opportunities in web and software development.
+            Bachelor of Science in Information Technology Graduate.
+            Software Development & Cloud Infrastructure.
           </p>
           <h4 className="font-droid text-xl font-bold">Code with Gem</h4>
         </div>
