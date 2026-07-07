@@ -39,7 +39,8 @@ const AboutMeInfo = () => {
           a student organization that trains others in tech and event support.
           I've also represented my region in national hackathons. Currently, I'm
           deepening my expertise in <span className="font-bold">cloud infrastructure</span>{" "}
-          and exploring the cutting edge of <span className="font-bold">agentic coding AI</span>.
+          and exploring the cutting edge of <span className="font-bold">agentic coding AI 
+          and spec-driven development</span>.
           I'm always eager to learn, grow, and build meaningful projects.
         </motion.p>
 
