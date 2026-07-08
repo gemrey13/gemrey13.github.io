@@ -35,7 +35,7 @@ const ExperienceSection = () => {
           className="flex flex-col justify-between md:w-1/2"
         >
           <div className="pb-3 text-lg font-semibold md:text-2xl">
-            <h3>IT Staff (Software Developer)</h3>
+            <h3>Software Developer</h3>
             <h3>Alquiros Food Corporation</h3>
             <h6 className="font-normal md:text-lg">
               <em>October 2025 - Present</em>
