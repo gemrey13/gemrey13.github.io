@@ -36,7 +36,7 @@ const ExperienceSection = () => {
         >
           <div className="pb-3 text-lg font-semibold md:text-2xl">
             <h3>Software Developer</h3>
-            <h3>Alquiros Food Corporation</h3>
+            <h3>Giligans Holdings Corporation</h3>
             <h6 className="font-normal md:text-lg">
               <em>October 2025 - Present</em>
             </h6>
