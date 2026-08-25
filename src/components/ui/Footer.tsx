@@ -8,7 +8,7 @@ import {
 import { MdEmail } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import SocialIconLink from "../SEO/SocialIconLink";
+import SocialIconLink from "../seo/SocialIconLink";
 
 const Footer = () => {
   return (

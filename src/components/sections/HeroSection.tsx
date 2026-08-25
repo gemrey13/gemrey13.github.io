@@ -7,7 +7,7 @@ import {
   FaTiktok,
   FaWhatsapp,
 } from "react-icons/fa";
-import SocialIconLink from "../SEO/SocialIconLink";
+import SocialIconLink from "../seo/SocialIconLink";
 import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";
 

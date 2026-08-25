@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/ui/Navbar";
 import Footer from "../components/ui/Footer";
-import ScrollToTop from "../components/SEO/ScrollToTop";
+import ScrollToTop from "../components/seo/ScrollToTop";
 import { Suspense } from "react";
 import Loader from "../components/ui/Loader";
 

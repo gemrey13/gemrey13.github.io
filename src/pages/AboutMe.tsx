@@ -4,7 +4,7 @@ import GuitarArtSection from "../components/sections/GuitarArtSection";
 import VolleyballSection from "../components/sections/VolleyballSection";
 import Title from "../components/ui/Title";
 import MeCoding from "../assets/photos/Gem Coding.png";
-import Head from "../components/SEO/Head";
+import Head from "../components/seo/Head";
 
 const AboutMe = () => {
   return (
