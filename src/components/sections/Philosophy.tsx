@@ -29,7 +29,7 @@ export default function Philosophy() {
         >
           {/* Accent border left */}
           <div
-            className="absolute top-0 left-0 h-full w-px bg-gradient-to-b from-accent via-accent/40 to-transparent"
+            className="absolute top-0 left-0 h-full w-px bg-linear-to-b from-accent via-accent/40 to-transparent"
             aria-hidden="true"
           />
 

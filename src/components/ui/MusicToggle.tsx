@@ -48,7 +48,7 @@ export default function MusicToggle() {
         />
 
         {/* Subtle shine on the disc surface */}
-        <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/5 to-transparent" />
+        <div className="absolute inset-0 rounded-full bg-linear-to-br from-white/5 to-transparent" />
       </div>
     </motion.button>
   );

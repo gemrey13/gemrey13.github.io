@@ -36,7 +36,7 @@ export default function ProjectShowcase() {
 
 
         {/* Featured Projects — Bento Grid */}
-        <div className="grid gap-4 md:grid-cols-2 md:grid-rows-2 md:gap-5 lg:gap-6 md:max-h-[680px]">
+        <div className="grid gap-4 md:grid-cols-2 md:grid-rows-2 md:gap-5 lg:gap-6 md:max-h-170">
           {/* Primary featured project — spans 2 rows */}
           {primaryProject && (
             <PrimaryFeaturedCard
@@ -107,7 +107,7 @@ function PrimaryFeaturedCard({
       >
         {/* Image — ~30% of the card height */}
         {project.image && (
-          <div className="relative aspect-[16/10] overflow-hidden bg-surface-elevated md:aspect-auto md:h-[30%] md:flex-none">
+          <div className="relative aspect-16/10 overflow-hidden bg-surface-elevated md:aspect-auto md:h-[30%] md:flex-none">
             {getPhotoUrl(project.image) ? (
               <img
                 src={getPhotoUrl(project.image)}
@@ -122,7 +122,7 @@ function PrimaryFeaturedCard({
             )}
             {/* Gradient overlay for depth */}
             <div
-              className="absolute inset-0 bg-gradient-to-t from-surface/80 via-transparent to-transparent"
+              className="absolute inset-0 bg-linear-to-t from-surface/80 via-transparent to-transparent"
               aria-hidden="true"
             />
           </div>
@@ -232,7 +232,7 @@ function SecondaryFeaturedCard({ project, index, reducedMotion }: CardProps) {
       >
         {/* Image — top portion, ~30% */}
         {project.image && (
-          <div className="aspect-[16/7] overflow-hidden bg-surface-elevated">
+          <div className="aspect-16/7 overflow-hidden bg-surface-elevated">
             {getPhotoUrl(project.image) ? (
               <img
                 src={getPhotoUrl(project.image)}

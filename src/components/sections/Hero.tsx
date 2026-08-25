@@ -261,7 +261,7 @@ export default function Hero() {
             }
             loading="eager"
             animateOnMount
-            className="aspect-[4/5]"
+            className="aspect-4/5"
           />
         </div>
       </div>
@@ -310,7 +310,7 @@ export default function Hero() {
             <span className="text-xs tracking-widest text-text-muted uppercase">
               Scroll
             </span>
-            <div className="h-6 w-px bg-gradient-to-b from-text-muted to-transparent" />
+            <div className="h-6 w-px bg-linear-to-b from-text-muted to-transparent" />
           </motion.div>
         </motion.div>
       )}

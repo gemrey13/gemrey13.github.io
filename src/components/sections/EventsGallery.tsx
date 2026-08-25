@@ -78,7 +78,7 @@ function EventCard({ event, index, large, reducedMotion }: EventCardProps) {
     >
       {/* Photo */}
       {event.photo && (
-        <div className="mb-4 aspect-[16/10] overflow-hidden rounded-lg bg-surface-elevated">
+        <div className="mb-4 aspect-16/10 overflow-hidden rounded-lg bg-surface-elevated">
           {getPhotoUrl(event.photo) ? (
             <img
               src={getPhotoUrl(event.photo)}

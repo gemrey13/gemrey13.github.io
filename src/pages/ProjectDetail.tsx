@@ -161,7 +161,7 @@ export default function ProjectDetail() {
                       className="flex items-start gap-3 text-text-secondary"
                     >
                       <span
-                        className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent"
+                        className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"
                         aria-hidden="true"
                       />
                       {challenge}

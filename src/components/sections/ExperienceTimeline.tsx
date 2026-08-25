@@ -23,7 +23,7 @@ export default function ExperienceTimeline() {
         <div className="relative">
           {/* Vertical line */}
           <div
-            className="absolute top-0 bottom-0 left-0 w-px bg-gradient-to-b from-accent/50 via-border to-transparent md:left-8"
+            className="absolute top-0 bottom-0 left-0 w-px bg-linear-to-b from-accent/50 via-border to-transparent md:left-8"
             aria-hidden="true"
           />
 
@@ -110,7 +110,7 @@ function ExperienceEntry({
               className="flex items-start gap-3 text-sm text-text-tertiary"
             >
               <span
-                className="mt-1.5 h-1 w-1 flex-shrink-0 rounded-full bg-accent/60"
+                className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-accent/60"
                 aria-hidden="true"
               />
               {item}
