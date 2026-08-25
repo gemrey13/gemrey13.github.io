@@ -110,7 +110,7 @@ export default function Hero() {
     <section
       ref={containerRef}
       onMouseMove={handleMouseMove}
-      className="relative flex min-h-screen items-center justify-center overflow-hidden px-6"
+      className="relative flex min-h-screen items-center justify-center overflow-hidden px-6 pt-20 md:pt-0"
       aria-label="Hero introduction"
     >
       {/* 3D Scene — progressive enhancement, lazy loaded */}
@@ -156,7 +156,7 @@ export default function Hero() {
       )}
 
       {/* Main content — split layout on desktop */}
-      <div className="relative z-10 flex w-full max-w-6xl flex-col items-center gap-12 md:flex-row md:items-center md:justify-between md:gap-16">
+      <div className="relative z-10 flex w-full max-w-6xl flex-col items-center gap-6 md:flex-row md:items-center md:justify-between md:gap-16">
         {/* Left side — text content */}
         <div className="text-center md:text-left">
           {/* Full name — introduces the person */}
@@ -181,7 +181,7 @@ export default function Hero() {
 
           {/* Role typewriter */}
           <motion.div
-            className="mt-6 flex h-8 items-center overflow-hidden"
+            className="mt-4 flex h-8 items-center overflow-hidden md:mt-6"
             initial={prefersReducedMotion ? {} : { opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.6 }}
@@ -198,7 +198,7 @@ export default function Hero() {
 
           {/* Personal statement */}
           <motion.p
-            className="mx-auto mt-8 max-w-lg text-base leading-relaxed text-text-secondary md:mx-0 md:text-lg"
+            className="mx-auto mt-4 max-w-lg text-base leading-relaxed text-text-secondary md:mx-0 md:mt-8 md:text-lg"
             initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.6 }}
@@ -210,7 +210,7 @@ export default function Hero() {
 
           {/* CTA + Social */}
           <motion.div
-            className="mt-10 flex flex-col items-center gap-6 sm:flex-row md:justify-start"
+            className="mt-6 flex flex-col items-center gap-6 sm:flex-row md:mt-10 md:justify-start"
             initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.6 }}
@@ -246,7 +246,7 @@ export default function Hero() {
         </div>
 
         {/* Right side — photo with interactive tilt */}
-        <div className="w-full max-w-xs shrink-0 sm:max-w-sm md:max-w-md">
+        <div className="w-full max-w-[240px] shrink-0 sm:max-w-sm md:max-w-md">
           <InteractivePhoto
             src={gemCoding}
             alt="Gem coding at a desk"
