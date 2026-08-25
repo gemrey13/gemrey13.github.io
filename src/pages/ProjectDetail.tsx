@@ -49,7 +49,7 @@ export default function ProjectDetail() {
         url={project.links?.live}
       />
 
-      <PageContainer variant="narrow">
+      <PageContainer variant="wide">
         <article>
           {/* Back link */}
           <Link
