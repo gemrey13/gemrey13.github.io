@@ -5,14 +5,18 @@ import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { getPhotoUrl } from "@/utils/index";
 import type { Project } from "@/types";
 
-export default function ProjectShowcase() {
+interface ProjectShowcaseProps {
+  standalone?: boolean;
+}
+
+export default function ProjectShowcase({ standalone }: ProjectShowcaseProps) {
   const prefersReducedMotion = useReducedMotion();
   const otherProjects = projects.filter((p) => !p.featured);
   const primaryProject = featuredProjects[0];
   const secondaryFeatured = featuredProjects.slice(1);
 
   return (
-    <section className="px-6 py-32" aria-label="Projects">
+    <section className={standalone ? "py-32" : "px-6 py-32"} aria-label="Projects">
       <div className="mx-auto max-w-6xl">
         {/* Page Header */}
         <motion.h2

@@ -18,12 +18,16 @@ const socialIcons: Record<string, React.ComponentType<{ size?: number }>> = {
   TikTok: FaTiktok,
 };
 
-export default function ContactCTA() {
+interface ContactCTAProps {
+  standalone?: boolean;
+}
+
+export default function ContactCTA({ standalone }: ContactCTAProps) {
   const prefersReducedMotion = useReducedMotion();
 
   return (
     <section
-      className="flex min-h-[70vh] flex-col items-center justify-center px-6 py-32 text-center"
+      className={`flex min-h-[70vh] flex-col items-center justify-center px-6 text-center ${standalone ? "pb-32" : "py-32"}`}
       aria-label="Contact"
     >
       <motion.h2

@@ -19,7 +19,7 @@ const StorytellingScene = lazy(
 const SCROLL_HEIGHT_PER_BEAT_VH = 70; // ~70vh per beat → medium pacing
 const BEATS_COUNT = storytellingBeats.length;
 
-export default function AboutStorytelling() {
+export default function AboutStorytelling({ standalone }: { standalone?: boolean }) {
   const prefersReducedMotion = useReducedMotion();
   const isMobile = useMediaQuery("(max-width: 768px)");
 
@@ -59,7 +59,7 @@ export default function AboutStorytelling() {
   if (prefersReducedMotion) {
     return (
       <section
-        className="relative px-6 py-32 md:py-48"
+        className={`relative px-6 ${standalone ? "pb-32 md:pb-48" : "py-32 md:py-48"}`}
         aria-label="More than just a developer"
       >
         <div className="mx-auto max-w-6xl">
@@ -74,7 +74,7 @@ export default function AboutStorytelling() {
   if (isMobile) {
     return (
       <section
-        className="relative px-6 py-20"
+        className={`relative px-6 ${standalone ? "pb-20" : "py-20"}`}
         aria-label="More than just a developer"
       >
         <div className="mx-auto max-w-6xl">
@@ -88,7 +88,7 @@ export default function AboutStorytelling() {
   // ─── Desktop: Sticky horizontal scroll storytelling ───
   return (
     <section
-      className="relative px-6 pt-32 md:pt-48"
+      className={`relative px-6 ${standalone ? "" : "pt-32 md:pt-48"}`}
       aria-label="More than just a developer"
     >
       <div className="mx-auto max-w-6xl">

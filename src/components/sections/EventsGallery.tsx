@@ -16,11 +16,15 @@ const eventTypeColors: Record<EventType, string> = {
   other: "bg-neutral-500/10 text-neutral-400",
 };
 
-export default function EventsGallery() {
+interface EventsGalleryProps {
+  standalone?: boolean;
+}
+
+export default function EventsGallery({ standalone }: EventsGalleryProps) {
   const prefersReducedMotion = useReducedMotion();
 
   return (
-    <section className="px-6 py-32" aria-label="Where I've shown up">
+    <section className={standalone ? "py-32" : "px-6 py-32"} aria-label="Where I've shown up">
       <div className="mx-auto max-w-6xl">
         <motion.h2
           className="font-display mb-4 text-3xl font-bold tracking-tight md:text-5xl"

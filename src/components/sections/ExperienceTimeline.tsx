@@ -3,11 +3,15 @@ import { workExperience } from "@/data/experience";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import type { WorkExperience } from "@/types";
 
-export default function ExperienceTimeline() {
+interface ExperienceTimelineProps {
+  standalone?: boolean;
+}
+
+export default function ExperienceTimeline({ standalone }: ExperienceTimelineProps) {
   const prefersReducedMotion = useReducedMotion();
 
   return (
-    <section className="px-6 py-32" aria-label="Work experience">
+    <section className={standalone ? "py-32" : "px-6 py-32"} aria-label="Work experience">
       <div className="mx-auto max-w-4xl">
         <motion.h2
           className="font-display mb-16 text-3xl font-bold tracking-tight md:text-5xl"
