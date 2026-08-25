@@ -44,6 +44,9 @@
     "typescript-eslint": "^8.33.1",
     "vite": "^7.0.4"
   },
+  "overrides": {
+    "three-mesh-bvh": "^0.8.3"
+  },
   "allowScripts": {
     "esbuild@0.28.2": true
   }
