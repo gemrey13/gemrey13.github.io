@@ -109,14 +109,14 @@ function PrimaryFeaturedCard({
         to={`/projects/${project.slug}`}
         className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-surface transition-all hover:border-accent/30 hover:bg-surface-elevated"
       >
-        {/* Image — ~30% of the card height */}
+        {/* Image — ~40% of the card height */}
         {project.image && (
-          <div className="relative aspect-16/10 overflow-hidden bg-surface-elevated md:aspect-auto md:h-[30%] md:flex-none">
+          <div className="relative aspect-16/9 overflow-hidden bg-surface-elevated md:aspect-auto md:h-[40%] md:flex-none">
             {getPhotoUrl(project.image) ? (
               <img
                 src={getPhotoUrl(project.image)}
                 alt={`${project.title} preview`}
-                className="h-full w-full object-fit transition-transform duration-500 group-hover:scale-[1.03]"
+                className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
                 loading="lazy"
               />
             ) : (
@@ -126,7 +126,7 @@ function PrimaryFeaturedCard({
             )}
             {/* Gradient overlay for depth */}
             <div
-              className="absolute inset-0 bg-linear-to-t from-surface/80 via-transparent to-transparent"
+              className="absolute inset-0 bg-linear-to-t from-surface/60 via-transparent to-transparent"
               aria-hidden="true"
             />
           </div>
