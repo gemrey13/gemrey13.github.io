@@ -143,6 +143,17 @@ export interface SEOConfig {
   ogImage?: string;
   ogType?: string;
   noIndex?: boolean;
+  keywords?: string;
+  /** ISO date string for article:published_time (blog posts) */
+  publishedTime?: string;
+  /** ISO date string for article:modified_time (blog posts) */
+  modifiedTime?: string;
+  /** Article author name */
+  articleAuthor?: string;
+  /** Article section/category */
+  articleSection?: string;
+  /** Article tags for og:article:tag */
+  articleTags?: string[];
 }
 
 export interface StorytellingBeat {

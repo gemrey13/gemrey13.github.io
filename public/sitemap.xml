@@ -2,71 +2,103 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://codewithgem.is-a.dev/</loc>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://codewithgem.is-a.dev/about</loc>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://codewithgem.is-a.dev/work</loc>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://codewithgem.is-a.dev/projects</loc>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://codewithgem.is-a.dev/projects/gi-recon-pro</loc>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://codewithgem.is-a.dev/projects/bir-ejournal</loc>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://codewithgem.is-a.dev/projects/dll-alumni-portal</loc>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://codewithgem.is-a.dev/projects/cbqp-inventory</loc>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://codewithgem.is-a.dev/projects/cbqp-voting</loc>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://codewithgem.is-a.dev/projects/likhain</loc>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://codewithgem.is-a.dev/events</loc>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://codewithgem.is-a.dev/blog</loc>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://codewithgem.is-a.dev/blog/why-i-chose-electron</loc>
+    <lastmod>2025-02-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://codewithgem.is-a.dev/blog/worker-threads-saved-my-app</loc>
+    <lastmod>2025-03-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://codewithgem.is-a.dev/blog/reconciling-messy-real-world-data</loc>
+    <lastmod>2025-05-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://codewithgem.is-a.dev/lab</loc>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://codewithgem.is-a.dev/contact</loc>
+    <lastmod>2025-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

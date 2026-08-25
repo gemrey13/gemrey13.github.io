@@ -2,7 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { motion } from "motion/react";
 import { projects } from "@/data/projects";
 import SEOHead from "@/components/seo/SEOHead";
-import { ProjectSchema } from "@/components/seo/StructuredData";
+import { ProjectSchema, BreadcrumbSchema } from "@/components/seo/StructuredData";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import PageContainer from "@/components/layout/PageContainer";
 
@@ -47,6 +47,13 @@ export default function ProjectDetail() {
         name={project.title}
         description={project.description}
         url={project.links?.live}
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", path: "/" },
+          { name: "Projects", path: "/projects" },
+          { name: project.title, path: `/projects/${project.slug}` },
+        ]}
       />
 
       <PageContainer variant="wide">

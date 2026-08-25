@@ -2,6 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import Markdown from "react-markdown";
 import { blogPosts } from "@/data/blog";
 import SEOHead from "@/components/seo/SEOHead";
+import { BreadcrumbSchema, BlogPostingSchema } from "@/components/seo/StructuredData";
 import PageContainer from "@/components/layout/PageContainer";
 
 export default function BlogPost() {
@@ -26,6 +27,25 @@ export default function BlogPost() {
         description={post.excerpt}
         canonical={`/blog/${post.slug}`}
         ogType="article"
+        publishedTime={new Date(post.date).toISOString()}
+        articleAuthor="Gem Rey Rañola"
+        articleSection="Software Development"
+        articleTags={post.tags}
+        keywords={post.tags.join(", ")}
+      />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", path: "/" },
+          { name: "Blog", path: "/blog" },
+          { name: post.title, path: `/blog/${post.slug}` },
+        ]}
+      />
+      <BlogPostingSchema
+        title={post.title}
+        excerpt={post.excerpt}
+        slug={post.slug}
+        datePublished={new Date(post.date).toISOString()}
+        tags={post.tags}
       />
       <PageContainer variant="reading">
         <article>
