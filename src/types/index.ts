@@ -50,7 +50,6 @@ export interface CaseStudy {
   approach?: string;
   architecture?: string;
   challenges?: string[];
-  technologies?: string[];
   result?: string;
 }
 
@@ -119,7 +118,6 @@ export interface ToolkitItem {
   name: string;
   category: ToolkitCategory;
   icon?: string;
-  projectSlugs?: string[];
 }
 
 export type ToolkitCategory =

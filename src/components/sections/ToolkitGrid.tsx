@@ -1,11 +1,14 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { motion } from "motion/react";
-import { toolkit, toolkitCategories } from "@/data/toolkit";
+import { toolkitCategories } from "@/data/toolkit";
+import { getToolkitWithProjects } from "@/utils/toolkit";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 export default function ToolkitGrid() {
   const prefersReducedMotion = useReducedMotion();
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
+
+  const toolkit = useMemo(() => getToolkitWithProjects(), []);
 
   const filteredTools = activeCategory
     ? toolkit.filter((t) => t.category === activeCategory)

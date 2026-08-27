@@ -2,34 +2,34 @@ import type { ToolkitItem } from "@/types";
 
 export const toolkit: ToolkitItem[] = [
   // Frontend
-  { name: "React", category: "frontend", projectSlugs: ["gi-recon-pro", "bir-ejournal", "dll-alumni-portal", "likhain"] },
-  { name: "TypeScript", category: "frontend", projectSlugs: ["gi-recon-pro", "bir-ejournal", "dll-alumni-portal"] },
+  { name: "React", category: "frontend" },
+  { name: "TypeScript", category: "frontend" },
   { name: "JavaScript", category: "frontend" },
-  { name: "Next.js", category: "frontend", projectSlugs: ["dll-alumni-portal"] },
-  { name: "Tailwind CSS", category: "frontend", projectSlugs: ["gi-recon-pro", "bir-ejournal", "dll-alumni-portal", "cbqp-inventory", "cbqp-voting"] },
+  { name: "Next.js", category: "frontend" },
+  { name: "Tailwind CSS", category: "frontend" },
 
   // Backend
-  { name: "Node.js", category: "backend", projectSlugs: ["gi-recon-pro", "bir-ejournal"] },
-  { name: "Python", category: "backend", projectSlugs: ["cbqp-inventory", "cbqp-voting", "likhain"] },
-  { name: "Django", category: "backend", projectSlugs: ["cbqp-inventory", "cbqp-voting", "likhain"] },
+  { name: "Node.js", category: "backend" },
+  { name: "Python", category: "backend" },
+  { name: "Django", category: "backend" },
   { name: "Flask", category: "backend" },
   { name: "FastAPI", category: "backend" },
   { name: "Express.js", category: "backend" },
   { name: "PHP", category: "backend" },
 
   // Database
-  { name: "SQLite", category: "database", projectSlugs: ["gi-recon-pro", "bir-ejournal"] },
-  { name: "PostgreSQL", category: "database", projectSlugs: ["dll-alumni-portal", "cbqp-inventory", "cbqp-voting", "likhain"] },
+  { name: "SQLite", category: "database" },
+  { name: "PostgreSQL", category: "database" },
   { name: "MySQL", category: "database" },
 
   // Cloud
-  { name: "Supabase", category: "cloud", projectSlugs: ["dll-alumni-portal"] },
+  { name: "Supabase", category: "cloud" },
   { name: "Firebase", category: "cloud" },
   { name: "AWS", category: "cloud" },
-  { name: "Vercel", category: "cloud", projectSlugs: ["dll-alumni-portal"] },
+  { name: "Vercel", category: "cloud" },
 
   // Desktop
-  { name: "Electron", category: "desktop", projectSlugs: ["gi-recon-pro", "bir-ejournal"] },
+  { name: "Electron", category: "desktop" },
 
   // Mobile
   { name: "React Native", category: "mobile" },

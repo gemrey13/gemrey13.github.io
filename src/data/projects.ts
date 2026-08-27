@@ -46,23 +46,6 @@ export const projects: Project[] = [
         "Service worker lifecycle management with Serwist — precaching strategy for offline shell, runtime caching for API responses, and install/update prompt handling for the PWA",
         "MapLibre GL integration without a React wrapper — imperative map control via refs for performance, with navigation camera that follows the runner's heading and position during active tracking",
       ],
-      technologies: [
-        "Next.js 16",
-        "React 19",
-        "TypeScript",
-        "Tailwind CSS v4",
-        "Supabase (Postgres, Auth, Realtime, Storage)",
-        "MapLibre GL",
-        "OpenFreeMap",
-        "Serwist / Service Workers",
-        "IndexedDB",
-        "Background Sync API",
-        "Framer Motion",
-        "Anime.js",
-        "Zod",
-        "Vitest",
-        "Testing Library",
-      ],
       // TODO: Gem — describe deployment status, user feedback, and personal outcome
       result:
         "A fully functional PWA running tracker installable on iOS and Android from the browser, with real-time GPS tracking, offline data persistence, automatic cloud sync, gamification with 25 levels and 15 badges, social leaderboards, and live run sharing — all running at zero infrastructure cost on Supabase and Vercel free tiers with OpenFreeMap tiles requiring no API key.",
@@ -109,23 +92,6 @@ export const projects: Project[] = [
         "Implementing a comprehensive audit trail logging all reconciliation runs, data imports, and system events",
         "Shipping auto-updates via electron-updater for seamless version distribution across the organization",
       ],
-      technologies: [
-        "React",
-        "TypeScript",
-        "Electron",
-        "electron-vite",
-        "Vite",
-        "SQLite",
-        "better-sqlite3",
-        "Node.js",
-        "Worker Threads",
-        "Tailwind CSS",
-        "electron-builder",
-        "electron-updater",
-        "xlsx",
-        "dbffile",
-        "adm-zip",
-      ],
       result:
         "Deployed across Giligan's restaurant chain and used daily by finance teams to reconcile delivery platform transactions against POS records. Reduced reconciliation time from days to minutes. The system handles automated matching with configurable tolerance, surfaces discrepancies with quantified amount differences, and produces actionable reports including branch performance metrics, partner sales breakdowns, and daily trend analysis — all running locally with no external data transmission.",
     },
@@ -168,17 +134,6 @@ export const projects: Project[] = [
         "Dual-theme runtime style swapping on a live map — switching between light atlas and dark void map styles while preserving camera position, zoom, and all existing markers and popups",
         "Geolocation state machine (off → locate → tracking) with a pulsing user marker — handling permission states, flying the camera to user location, and rendering a custom pulsing dot that updates position in tracking mode",
         "Memory leak prevention — properly removing markers, popups, and spider legs on state changes and component unmount, tracking all refs for cleanup",
-      ],
-      technologies: [
-        "Next.js 16",
-        "React 19",
-        "TypeScript",
-        "Tailwind CSS v4",
-        "Supabase (Postgres, Realtime, RLS)",
-        "MapLibre GL JS",
-        "OpenFreeMap",
-        "Supercluster",
-        "Geolocation API",
       ],
       // TODO: Gem — describe deployment status and personal outcome
       result:
@@ -227,19 +182,6 @@ export const projects: Project[] = [
         "Implementing comprehensive audit logging to track all admin actions for accountability",
         "Managing incremental database migrations across enums, profiles, curricula, tracer data, job board, events, notifications, RLS policies, and indexes",
       ],
-      technologies: [
-        "Next.js",
-        "React",
-        "TypeScript",
-        "Tailwind CSS",
-        "Supabase",
-        "PostgreSQL",
-        "shadcn/ui",
-        "Zod",
-        "React Hook Form",
-        "Recharts",
-        "Lucide React",
-      ],
       result:
         "Deployed on Vercel and serving as the alumni office's digital platform for graduate tracking, job matching, event management, and community engagement at Dalubhasaan ng Lungsod ng Lucena. The system supports alumni registration with verification, tracer study data collection for curriculum improvement, a moderated job board, event participation, real-time notifications, and a full analytics dashboard for institutional insights.",
     },
@@ -263,7 +205,6 @@ export const projects: Project[] = [
         "CBQP needed a centralized system to track and manage their fixed furniture and equipment across the organization.",
       approach:
         "Built a full-stack inventory management system using Django and PostgreSQL, with a modern Tailwind CSS frontend.",
-      technologies: ["Django", "PostgreSQL", "Tailwind CSS", "Python"],
     },
   },
   {
@@ -306,22 +247,6 @@ export const projects: Project[] = [
         "Running the entire reconciliation and output generation in a background worker thread without blocking the Electron renderer process",
         "Generating formatted A4 PDF documents from plain-text receipt files using PDFKit with Courier font for consistent formatting",
       ],
-      technologies: [
-        "React",
-        "TypeScript",
-        "Electron",
-        "electron-vite",
-        "Vite",
-        "SQLite",
-        "better-sqlite3",
-        "Node.js",
-        "Worker Threads",
-        "Tailwind CSS",
-        "PDFKit",
-        "adm-zip",
-        "Lucide React",
-        "electron-builder",
-      ],
       result:
         "Delivered as a production Windows desktop application used by the finance team for BIR compliance workflows. The system processes entire branch folder hierarchies in a single operation, handles password-protected nested archives transparently, reconciles receipts against configurable target amounts with real-time progress feedback, and produces organized output with both modified files and preserved originals for complete audit trails. PDF output generation provides formatted documents ready for submission.",
     },
@@ -345,7 +270,6 @@ export const projects: Project[] = [
         "CBQP needed a reliable digital voting system for their cooperative general assemblies and decision-making processes.",
       approach:
         "Developed a secure voting application that was deployed at the CBQP General Assembly 2024 on June 30, 2024.",
-      technologies: ["Django", "PostgreSQL", "Tailwind CSS", "Python"],
     },
   },
   {
@@ -366,7 +290,6 @@ export const projects: Project[] = [
         "Many Quezonians looking for income opportunities face difficulty finding accessible local jobs and freelance work, especially for non-professional skills and services.",
       approach:
         "Collaborated with a software development team to build Likhain, a web-based job-matching platform that connects Quezonians with local non-professional job and freelance opportunities. The application was developed with Django for the backend and React for the frontend.",
-      technologies: ["Django", "React", "PostgreSQL", "Tailwind CSS", "Python"],
     },
   },
 ];
