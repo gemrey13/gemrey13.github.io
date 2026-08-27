@@ -2,62 +2,70 @@ import type { Project } from "@/types";
 
 export const projects: Project[] = [
   {
-    id: "dll-alumni-portal",
-    slug: "dll-alumni-portal",
-    title: "DLL Alumni Portal",
+    id: "outpace",
+    slug: "outpace",
+    title: "Outpace",
     tagline:
-      "Full-stack alumni management platform with tracer studies, job board, and real-time engagement",
+      "Real-time GPS running tracker with gamification, live sharing, and offline-first PWA architecture",
     description:
-      "A comprehensive alumni management system for Dalubhasaan ng Lungsod ng Lucena (DLL) featuring multi-step tracer study surveys for curriculum analysis, a moderated job board, event management, alumni directory, real-time notifications, an analytics dashboard, and audit logging — with role-based access for admins and alumni.",
+      "A mobile-first Progressive Web App for runners that combines real-time GPS tracking with gamification (XP, levels, badges, streaks), social features (follows, leaderboards, live run sharing), and offline-first reliability — all installable from the browser without an app store. GPS points are stored in IndexedDB and synced via Background Sync when connectivity returns.",
     technologies: [
       "Next.js",
       "React",
       "TypeScript",
       "Tailwind CSS",
       "Supabase",
-      "PostgreSQL",
-      "shadcn/ui",
+      "MapLibre GL",
+      "Serwist (PWA)",
+      "IndexedDB",
+      "Framer Motion",
+      "Anime.js",
       "Zod",
-      "React Hook Form",
-      "Recharts",
-      "Lucide React",
     ],
+    // TODO: Gem — add actual GitHub repo URL and live URL
     links: {
-      live: "https://dll-alumni.vercel.app/",
-      github: "https://github.com/gemrey13/DLL-Alumni",
+      github: "https://github.com/gemrey13/outpace-app",
     },
-    image: "dll-alumni-portal.png",
     featured: true,
+    presentationType: "phone-mockup",
     caseStudy: {
+      // TODO: Gem — replace or expand with personal motivation for building this
       problem:
-        "Dalubhasaan ng Lungsod ng Lucena needed a centralized digital platform to track alumni career outcomes, facilitate graduate engagement, and gather structured data for curriculum analysis. The alumni office had no efficient way to conduct tracer studies, manage events, or connect graduates with job opportunities — all of which were handled through fragmented manual processes.",
+        "Most running tracker apps are locked behind app stores, require heavy downloads, and lose data without connectivity. Runners need a lightweight, instantly accessible tracker that works reliably offline — capturing GPS data without network dependency — while still offering the motivation of gamification and community features when connected.",
       approach:
-        "Built a full-stack web platform with role-based access (admin and alumni roles) using Next.js App Router with Server Components and Server Actions. The system provides admins with tools to conduct tracer surveys, moderate job postings, manage events and announcements, and view analytics — while alumni get a personalized dashboard, job board access, event participation, and a community directory. Real-time notifications keep users engaged without polling.",
+        "Built a Progressive Web App using Next.js 16 App Router that delivers a native-feeling mobile experience installable directly from the browser. The tracking engine uses the Geolocation API with a state machine (idle → requesting → tracking → paused → stopped) and auto-pause detection after 30 seconds of no movement. GPS points are stored locally in IndexedDB and synced to Supabase via Background Sync when the device reconnects. A full gamification layer (XP per run with streak multipliers, Fibonacci-inspired level thresholds across 25 tiers, 15 unlockable badges, and daily streaks) drives repeat engagement. Social features include follower relationships, weekly/monthly leaderboards, and real-time run sharing where friends watch your position update live via Supabase Realtime broadcast channels.",
       architecture:
-        "Next.js 16 App Router with React 19 Server Components and Server Actions for the application layer. Supabase provides the backend infrastructure: PostgreSQL database, authentication with cookie-based sessions, Realtime subscriptions for instant notifications, and Storage for file uploads. Row Level Security (RLS) policies enforce data access at the database level. Middleware handles route protection based on user roles. The frontend uses shadcn/ui components, Zod for form validation, React Hook Form for multi-step form management, and Recharts for analytics visualizations.",
+        "Next.js 16 App Router with Turbopack for the application framework, deployed on Vercel. Supabase provides the backend: PostgreSQL database, email/Google OAuth authentication, Realtime broadcast for live run sharing, and Storage for share card images. MapLibre GL with OpenFreeMap tiles (free, no API key) renders the interactive map with the runner's route polyline and navigation camera. Serwist handles the service worker lifecycle — precaching static assets, registering Background Sync for offline run uploads, and managing the install prompt. IndexedDB (via a custom wrapper) stores pending runs and GPS points in three object stores (pending_runs, pending_points, sync_queue). The gamification engine runs client-side: XP calculation with distance-based rates and streak multipliers, badge unlock evaluation against 15 conditions, and streak management with timezone-aware date boundaries. A comprehensive Vitest + Testing Library test suite covers 233 tests across 14 files including GPS calculations, gamification logic, offline storage, sync queue, hooks, and UI components.",
       challenges: [
-        "Implementing real-time notifications using Supabase Realtime subscriptions with proper cleanup on unmount",
-        "Designing Row Level Security policies across all tables to enforce role-based data access at the database level",
-        "Building a multi-step tracer survey form with complex validation and conditional fields using React Hook Form and Zod",
-        "Creating a job board moderation workflow with admin approval, status transitions, and alumni-facing visibility controls",
-        "Implementing comprehensive audit logging to track all admin actions for accountability",
-        "Managing incremental database migrations across enums, profiles, curricula, tracer data, job board, events, notifications, RLS policies, and indexes",
+        "Implementing a GPS tracking state machine with auto-pause detection — the hook monitors movement threshold (3m minimum) and triggers auto-pause after 30 seconds of inactivity, with proper cleanup of watchPosition and interval timers",
+        "Building offline-first storage with IndexedDB — a custom wrapper manages three object stores for pending runs, GPS points (indexed by run_id and sync status), and a sync queue, all with proper transaction handling",
+        "Background Sync integration — completed runs register with the service worker's sync manager and upload automatically when connectivity returns, with retry logic and queue management",
+        "Haversine distance calculations with point filtering — each GPS coordinate is validated against accuracy thresholds and minimum movement before being accepted, preventing GPS drift from inflating distance",
+        "Fibonacci-inspired XP and leveling system — 25 level tiers with exponentially growing thresholds (each gap grows ~1.6x), streak multipliers up to 2.0x, and pace improvement bonuses",
+        "Real-time run sharing via Supabase Realtime broadcast — publishers stream position updates on a channel keyed to a nanoid share token, subscribers receive live coordinate updates with proper channel cleanup on unmount",
+        "Service worker lifecycle management with Serwist — precaching strategy for offline shell, runtime caching for API responses, and install/update prompt handling for the PWA",
+        "MapLibre GL integration without a React wrapper — imperative map control via refs for performance, with navigation camera that follows the runner's heading and position during active tracking",
       ],
       technologies: [
-        "Next.js",
-        "React",
+        "Next.js 16",
+        "React 19",
         "TypeScript",
-        "Tailwind CSS",
-        "Supabase",
-        "PostgreSQL",
-        "shadcn/ui",
+        "Tailwind CSS v4",
+        "Supabase (Postgres, Auth, Realtime, Storage)",
+        "MapLibre GL",
+        "OpenFreeMap",
+        "Serwist / Service Workers",
+        "IndexedDB",
+        "Background Sync API",
+        "Framer Motion",
+        "Anime.js",
         "Zod",
-        "React Hook Form",
-        "Recharts",
-        "Lucide React",
+        "Vitest",
+        "Testing Library",
       ],
+      // TODO: Gem — describe deployment status, user feedback, and personal outcome
       result:
-        "Deployed on Vercel and serving as the alumni office's digital platform for graduate tracking, job matching, event management, and community engagement at Dalubhasaan ng Lungsod ng Lucena. The system supports alumni registration with verification, tracer study data collection for curriculum improvement, a moderated job board, event participation, real-time notifications, and a full analytics dashboard for institutional insights.",
+        "A fully functional PWA running tracker installable on iOS and Android from the browser, with real-time GPS tracking, offline data persistence, automatic cloud sync, gamification with 25 levels and 15 badges, social leaderboards, and live run sharing — all running at zero infrastructure cost on Supabase and Vercel free tiers with OpenFreeMap tiles requiring no API key.",
     },
   },
   {
@@ -123,6 +131,120 @@ export const projects: Project[] = [
     },
   },
   {
+    id: "void-atlas",
+    slug: "void-atlas",
+    title: "Void Atlas",
+    tagline:
+      "Anonymous spatial micro-blogging — unsaid thoughts pinned to real-world coordinates",
+    description:
+      "An anonymous spatial micro-blogging app where users drop thoughts (280 characters max) at their exact GPS coordinates. No accounts, no followers — just words attached to where you actually are. Notes appear instantly for all connected visitors via Supabase Realtime, rendered on a 3D interactive map with building extrusions, marker clustering, and dual light/dark themes.",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Supabase",
+      "MapLibre GL",
+      "Supercluster",
+      "Realtime",
+    ],
+    // TODO: Gem — add actual GitHub repo URL and live URL
+    links: {
+      github: "https://github.com/gemrey13/void-atlas-app",
+    },
+    featured: true,
+    caseStudy: {
+      // TODO: Gem — replace or expand with personal motivation for building this
+      problem:
+        "Social media ties every thought to an identity — profiles, followers, metrics. Sometimes people want to express something without the weight of who they are. The concept: what if you could drop a thought exactly where you are, visible to anyone nearby, with no trace back to you? A spatial layer of anonymous human expression pinned to real-world geography.",
+      approach:
+        "Built a fullscreen interactive map application with raw MapLibre GL JS (no React wrapper — imperative control via refs for maximum performance). Notes are stored in Supabase PostgreSQL with lat/lng coordinates and delivered in real-time via Supabase Realtime INSERT subscriptions. Supercluster handles viewport-based marker clustering with spider/spiral expansion on click for overlapping notes. A dual-theme system (light atlas + dark void mode) persists to localStorage and swaps the entire map style at runtime. Geolocation operates in three modes (off / locate / tracking) with a pulsing user marker. A 30-second cooldown prevents spam after dropping a note.",
+      architecture:
+        "Next.js 16 App Router with Turbopack. The map is controlled entirely through imperative MapLibre GL JS — no wrapper components. Markers are DOM elements managed via refs, not React components, which eliminates reconciliation overhead for hundreds of notes. Supercluster builds a spatial index from all notes and returns only visible clusters/points for the current viewport bounds and zoom level. Spider positions are computed for overlapping notes within clusters using a spiral algorithm. Supabase provides PostgreSQL storage with Row Level Security (anyone can read and insert, no auth required) and Realtime subscriptions for live note delivery. OpenFreeMap provides vector tiles at zero cost. 3D building extrusions render at zoom level 15+ for spatial context. The app targets under 3 seconds initial load on 4G, sub-1-second note delivery, and 60fps map interaction.",
+      challenges: [
+        "Imperative MapLibre marker lifecycle management — creating, updating, and removing DOM markers via refs without React reconciliation, handling theme changes by updating all existing marker styles in-place",
+        "Supercluster integration with spider/spiral layouts — rebuilding the spatial index on note changes, computing spider positions for overlapping notes, rendering SVG connector legs between cluster center and expanded notes",
+        "Real-time note delivery via Supabase Realtime — subscribing to INSERT events on the notes table, adding new notes to state with animation flags, and cleaning up subscriptions on unmount",
+        "Dual-theme runtime style swapping on a live map — switching between light atlas and dark void map styles while preserving camera position, zoom, and all existing markers and popups",
+        "Geolocation state machine (off → locate → tracking) with a pulsing user marker — handling permission states, flying the camera to user location, and rendering a custom pulsing dot that updates position in tracking mode",
+        "Memory leak prevention — properly removing markers, popups, and spider legs on state changes and component unmount, tracking all refs for cleanup",
+      ],
+      technologies: [
+        "Next.js 16",
+        "React 19",
+        "TypeScript",
+        "Tailwind CSS v4",
+        "Supabase (Postgres, Realtime, RLS)",
+        "MapLibre GL JS",
+        "OpenFreeMap",
+        "Supercluster",
+        "Geolocation API",
+      ],
+      // TODO: Gem — describe deployment status and personal outcome
+      result:
+        "A fully deployed anonymous spatial micro-blogging app running at zero monthly cost — OpenFreeMap (free tiles), Supabase free tier (database + realtime), and Vercel Hobby (hosting). Notes appear in under 1 second for all connected visitors. The 3D map runs at 60fps with hundreds of clustered markers, and the entire JavaScript bundle compresses to under 300KB.",
+    },
+  },
+  {
+    id: "dll-alumni-portal",
+    slug: "dll-alumni-portal",
+    title: "DLL Alumni Portal",
+    tagline:
+      "Full-stack alumni management platform with tracer studies, job board, and real-time engagement",
+    description:
+      "A comprehensive alumni management system for Dalubhasaan ng Lungsod ng Lucena (DLL) featuring multi-step tracer study surveys for curriculum analysis, a moderated job board, event management, alumni directory, real-time notifications, an analytics dashboard, and audit logging — with role-based access for admins and alumni.",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Supabase",
+      "PostgreSQL",
+      "shadcn/ui",
+      "Zod",
+      "React Hook Form",
+      "Recharts",
+      "Lucide React",
+    ],
+    links: {
+      live: "https://dll-alumni.vercel.app/",
+      github: "https://github.com/gemrey13/DLL-Alumni",
+    },
+    image: "dll-alumni-portal.png",
+    featured: false,
+    caseStudy: {
+      problem:
+        "Dalubhasaan ng Lungsod ng Lucena needed a centralized digital platform to track alumni career outcomes, facilitate graduate engagement, and gather structured data for curriculum analysis. The alumni office had no efficient way to conduct tracer studies, manage events, or connect graduates with job opportunities — all of which were handled through fragmented manual processes.",
+      approach:
+        "Built a full-stack web platform with role-based access (admin and alumni roles) using Next.js App Router with Server Components and Server Actions. The system provides admins with tools to conduct tracer surveys, moderate job postings, manage events and announcements, and view analytics — while alumni get a personalized dashboard, job board access, event participation, and a community directory. Real-time notifications keep users engaged without polling.",
+      architecture:
+        "Next.js 16 App Router with React 19 Server Components and Server Actions for the application layer. Supabase provides the backend infrastructure: PostgreSQL database, authentication with cookie-based sessions, Realtime subscriptions for instant notifications, and Storage for file uploads. Row Level Security (RLS) policies enforce data access at the database level. Middleware handles route protection based on user roles. The frontend uses shadcn/ui components, Zod for form validation, React Hook Form for multi-step form management, and Recharts for analytics visualizations.",
+      challenges: [
+        "Implementing real-time notifications using Supabase Realtime subscriptions with proper cleanup on unmount",
+        "Designing Row Level Security policies across all tables to enforce role-based data access at the database level",
+        "Building a multi-step tracer survey form with complex validation and conditional fields using React Hook Form and Zod",
+        "Creating a job board moderation workflow with admin approval, status transitions, and alumni-facing visibility controls",
+        "Implementing comprehensive audit logging to track all admin actions for accountability",
+        "Managing incremental database migrations across enums, profiles, curricula, tracer data, job board, events, notifications, RLS policies, and indexes",
+      ],
+      technologies: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Supabase",
+        "PostgreSQL",
+        "shadcn/ui",
+        "Zod",
+        "React Hook Form",
+        "Recharts",
+        "Lucide React",
+      ],
+      result:
+        "Deployed on Vercel and serving as the alumni office's digital platform for graduate tracking, job matching, event management, and community engagement at Dalubhasaan ng Lungsod ng Lucena. The system supports alumni registration with verification, tracer study data collection for curriculum improvement, a moderated job board, event participation, real-time notifications, and a full analytics dashboard for institutional insights.",
+    },
+  },
+  {
     id: "cbqp-inventory",
     slug: "cbqp-inventory",
     title: "CBQP FFE Inventory System",
@@ -135,7 +257,7 @@ export const projects: Project[] = [
     links: {
       github: "https://github.com/gemrey13/ffe_inventory",
     },
-    featured: true,
+    featured: false,
     caseStudy: {
       problem:
         "CBQP needed a centralized system to track and manage their fixed furniture and equipment across the organization.",

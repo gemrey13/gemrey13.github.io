@@ -5,6 +5,7 @@ import SEOHead from "@/components/seo/SEOHead";
 import { ProjectSchema, BreadcrumbSchema } from "@/components/seo/StructuredData";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import PageContainer from "@/components/layout/PageContainer";
+import PhoneMockup from "@/components/ui/PhoneMockup";
 
 export default function ProjectDetail() {
   const { slug } = useParams<{ slug: string }>();
@@ -127,6 +128,39 @@ export default function ProjectDetail() {
                 </a>
               )}
             </div>
+          )}
+
+          {/* Phone Mockup Hero — for projects with phone-mockup presentation */}
+          {project.presentationType === "phone-mockup" && (
+            <motion.section
+              className="mt-16 overflow-hidden rounded-2xl border border-border bg-zinc-950 px-6 py-12 md:px-12 md:py-16"
+              initial={prefersReducedMotion ? {} : { opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
+              <div className="flex flex-col items-center gap-8 md:flex-row md:gap-12 lg:gap-16">
+                {/* Text content */}
+                <div className="flex-1 text-center md:text-left">
+                  <h2 className="font-display text-2xl font-bold text-white md:text-3xl">
+                    Built for your pocket
+                  </h2>
+                  <p className="mt-3 max-w-md text-text-secondary">
+                    A fast, native-feeling PWA you can install and use without
+                    an app store.
+                  </p>
+                </div>
+
+                {/* Phone mockup */}
+                <div className="relative flex-shrink-0">
+                  <PhoneMockup size="large" />
+                  {/* Background glow */}
+                  <div
+                    className="pointer-events-none absolute inset-0 -z-10 scale-150 bg-radial-[ellipse_at_center] from-indigo-500/15 via-transparent to-transparent blur-2xl"
+                    aria-hidden="true"
+                  />
+                </div>
+              </div>
+            </motion.section>
           )}
 
           {/* Case Study Content */}

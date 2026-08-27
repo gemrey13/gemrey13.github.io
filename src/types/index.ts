@@ -40,6 +40,8 @@ export interface Project {
   };
   image?: string;
   featured: boolean;
+  /** Controls how the project is visually presented (e.g., phone mockup vs standard screenshot) */
+  presentationType?: "default" | "phone-mockup";
   caseStudy?: CaseStudy;
 }
 

@@ -3,6 +3,7 @@ import { motion } from "motion/react";
 import { projects, featuredProjects } from "@/data/projects";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { getPhotoUrl } from "@/utils/index";
+import PhoneMockup from "@/components/ui/PhoneMockup";
 import type { Project } from "@/types";
 
 interface ProjectShowcaseProps {
@@ -109,8 +110,22 @@ function PrimaryFeaturedCard({
         to={`/projects/${project.slug}`}
         className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-surface transition-all hover:border-accent/30 hover:bg-surface-elevated"
       >
-        {/* Image — ~40% of the card height */}
-        {project.image && (
+        {/* Visual area — phone mockup or image */}
+        {project.presentationType === "phone-mockup" ? (
+          <div className="relative flex items-center justify-center overflow-hidden bg-zinc-950 py-6 md:h-[45%] md:flex-none md:py-0">
+            <motion.div
+              className="transition-transform duration-500 group-hover:scale-[1.03]"
+              whileHover={reducedMotion ? {} : { rotate: 1 }}
+            >
+              <PhoneMockup size="compact" />
+            </motion.div>
+            {/* Subtle radial glow behind the phone */}
+            <div
+              className="pointer-events-none absolute inset-0 bg-radial-[ellipse_at_center] from-indigo-500/10 via-transparent to-transparent"
+              aria-hidden="true"
+            />
+          </div>
+        ) : project.image ? (
           <div className="relative aspect-16/9 overflow-hidden bg-surface-elevated md:aspect-auto md:h-[40%] md:flex-none">
             {getPhotoUrl(project.image) ? (
               <img
@@ -130,7 +145,7 @@ function PrimaryFeaturedCard({
               aria-hidden="true"
             />
           </div>
-        )}
+        ) : null}
 
         {/* Content — takes the other half */}
         <div className="flex flex-1 flex-col justify-between p-6 md:p-8">
