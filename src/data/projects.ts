@@ -22,8 +22,8 @@ export const projects: Project[] = [
       "Anime.js",
       "Zod",
     ],
-    // TODO: Gem — add actual GitHub repo URL and live URL
     links: {
+      live: "https://outpace-app.vercel.app",
       github: "https://github.com/gemrey13/outpace-app",
     },
     featured: true,
@@ -148,8 +148,8 @@ export const projects: Project[] = [
       "Supercluster",
       "Realtime",
     ],
-    // TODO: Gem — add actual GitHub repo URL and live URL
     links: {
+      live: "https://void-atlas-one.vercel.app/",
       github: "https://github.com/gemrey13/void-atlas-app",
     },
     featured: true,
