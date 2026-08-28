@@ -141,6 +141,35 @@ export const projects: Project[] = [
     },
   },
   {
+    id: "fx-currency-matrix",
+    slug: "fx-currency-matrix",
+    title: "FX Currency Matrix",
+    tagline: "Real-time forex analytics with currency strength heatmap, candlestick charts, and position sizing",
+    description:
+      "A dark-themed Forex analytics platform featuring an 8×8 currency strength heatmap comparing 28 cross-currency pairs, a live strength leaderboard with animated rankings, TradingView candlestick chart integration with pair switching and OHLC statistics, and a position size calculator based on account risk parameters — all powered by live exchange rate data from ExchangeRate-API and Twelve Data.",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "TradingView Lightweight Charts",
+      "Framer Motion",
+      "next-themes",
+      "Vitest",
+    ],
+    links: {
+      live: "https://fx-currency-matrix.vercel.app/",
+      github: "https://github.com/gemrey13/fx-currency-matrix-app",
+    },
+    featured: false,
+    caseStudy: {
+      problem:
+        "Forex traders analyzing currency strength across multiple pairs rely on scattered tools and manual cross-referencing. There was no single lightweight dashboard that visualized relative strength across all 28 major cross-pairs in a matrix format while also providing charting and position sizing in one place.",
+      approach:
+        "Built a Next.js App Router application with a server-side API layer that fetches live spot rates from ExchangeRate-API and OHLC candlestick data from Twelve Data, cached with appropriate TTLs. The frontend renders an interactive 8×8 heatmap matrix with color-coded strength scores, a ranked leaderboard with animated progress bars, a TradingView lightweight-charts candlestick view, and a real-time position size calculator — all in a dark-first UI with theme persistence.",
+    },
+  },
+  {
     id: "dll-alumni-portal",
     slug: "dll-alumni-portal",
     title: "DLL Alumni Portal",
