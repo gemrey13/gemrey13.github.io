@@ -87,6 +87,12 @@ export const storytellingBeats = [
 //   { src: "/certification/image.jpg", name: "Cert Name", issuer: "Issuer", url: "optional-link" }
 export const certifications: Certification[] = [
   {
+    src: "/certification/foundational-csharp.png",
+    name: "Foundational C# with Microsoft",
+    issuer: "freeCodeCamp",
+    url: "https://freecodecamp.org/certification/codewgem/foundational-c-sharp-with-microsoft",
+  },
+  {
     src: "/certification/Networking_Basics.jpg",
     name: "Networking Basics",
     issuer: "Cisco - Net Acad",
