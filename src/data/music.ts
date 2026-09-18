@@ -13,7 +13,7 @@
 // TODO: Replace these placeholder imports with your actual mp3 files
 // Example:
 import japan from '@/assets/audio/japan.mp3';
-// import lofi from '@/assets/audio/lofi.mp3';
+import coding from '@/assets/audio/coding-night.mp3';
 // import night from '@/assets/audio/night.mp3';
 
 export interface Track {
@@ -26,14 +26,14 @@ export interface Track {
 
 // TODO: Update imports and entries when you add your mp3 files
 export const tracks: Track[] = [
-  // { id: 'japan', name: 'Chill Japanese', src: japan }
-  // { id: 'chill', name: 'Chill Japanese', src: chill },
+  { id: 'japan', name: 'Chill Japanese', src: japan },
+  { id: 'coding', name: 'Coding Night', src: coding },
   // { id: 'lofi', name: 'Lofi Night', src: lofi },
   // { id: 'night', name: 'Late Night Coding', src: night },
 ];
 
 // ─── CHANGE THIS TO SWITCH THE MOOD ────────────────────────
-export const activeTrackId = "japan";
+export const activeTrackId = "coding";
 // ────────────────────────────────────────────────────────────
 
 export function getActiveTrack(): Track | null {
