@@ -26,7 +26,7 @@ export interface Track {
 
 // TODO: Update imports and entries when you add your mp3 files
 export const tracks: Track[] = [
-  { id: 'japan', name: 'Chill Japanese', src: japan }
+  // { id: 'japan', name: 'Chill Japanese', src: japan }
   // { id: 'chill', name: 'Chill Japanese', src: chill },
   // { id: 'lofi', name: 'Lofi Night', src: lofi },
   // { id: 'night', name: 'Late Night Coding', src: night },
