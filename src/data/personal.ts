@@ -12,7 +12,7 @@ export const personalInfo: PersonalInfo = {
   education: {
     degree: "Bachelor of Science in Information Technology",
     institution: "Dalubhasaan ng Lungsod ng Lucena",
-    award: "Most Promising IT Practitioner",
+    award: "Most Promising IT Practitioner and Dean's Lister",
     specialization: "Software Development and Cloud Infrastructure",
   },
   philosophy:
