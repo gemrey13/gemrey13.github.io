@@ -21,7 +21,7 @@ const Navbar = () => {
           </li>
           <li>
             <NavItemLink
-              to="/Gem - CV.pdf"
+              to="/Gem_Rey_Ranola_CV.pdf"
               label="Résumé"
               isExternal={true}
             />

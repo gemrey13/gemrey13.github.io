@@ -88,7 +88,7 @@ const HeroSection = () => {
           specializing in Software Development and Cloud Infrastructure.
         </p>
         <Link
-          to="/Gem - CV.pdf"
+          to="/Gem_Rey_Ranola_CV.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="text-link w-fit text-lg font-semibold underline md:text-lg lg:text-2xl"

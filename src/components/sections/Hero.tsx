@@ -216,7 +216,7 @@ export default function Hero() {
             transition={{ delay: 0.8, duration: 0.6 }}
           >
             <a
-              href="/Gem - CV.pdf"
+              href="/Gem_Rey_Ranola_CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-lg border border-border bg-surface/80 px-6 py-3 text-sm font-medium text-text-primary backdrop-blur-sm transition-all hover:border-accent/50 hover:bg-surface-elevated"
