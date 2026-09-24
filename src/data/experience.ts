@@ -4,7 +4,7 @@ export const workExperience: WorkExperience[] = [
   {
     id: "giligans",
     role: "Software Developer",
-    company: "Giligans Holding Corporation",
+    company: "Giligan's Holding Corporation",
     period: "October 2025 – Present",
     startDate: "2025-10",
     current: true,
@@ -77,7 +77,7 @@ export const workExperience: WorkExperience[] = [
   },
   {
     id: "cbqp",
-    role: "Software Engineer Intern",
+    role: "Software Developer Intern",
     company: "Cooperative Bank of Quezon Province",
     period: "March 2025 – June 2025",
     startDate: "2025-03",
